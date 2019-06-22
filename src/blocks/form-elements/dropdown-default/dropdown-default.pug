@@ -1,0 +1,8 @@
+mixin dropdown-default(name)
+
+	.dropdown-default
+		.dropdown-default_wrapper
+			label(for='dropdown' class='dropdown-default__label_style')
+				p Dropdown
+			select(id='dropdown' name='dropdown' class='dropdown-default__input_style' placeholder= name)
+				option(value='' selected)= name

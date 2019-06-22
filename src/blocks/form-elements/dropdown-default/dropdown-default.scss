@@ -1,0 +1,28 @@
+.dropdown-default_wrapper {
+	padding-left: 140px;
+}
+
+.dropdown-default__label_style {
+	font: $font-label;
+	text-transform: uppercase;
+	color: $dark-shade-100;
+}
+
+.dropdown-default__input_style {
+	outline: none;
+	font: $font-text;
+	color: $dark-shade-25;
+	padding: 10px;
+	height: 44px;
+	width: 320px;
+	border: 1px solid $dark-shade-25;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: url(/src/img/expand_more.png) no-repeat 95% 50%;
+}

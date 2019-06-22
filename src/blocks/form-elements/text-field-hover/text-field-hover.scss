@@ -1,0 +1,27 @@
+.text-field-hover_wrapper {
+	padding-left: 140px;
+}
+
+.text-field-hover__label_style {
+	font: $font-label;
+	text-transform: uppercase;
+	color: $dark-shade-100;
+}
+
+.text-field-hover__input_style {
+	outline: none;
+	font: $font-text;
+	color: $dark-shade-75;
+	padding: 10px;
+	width: 300px;
+	border: 1px solid $dark-shade-50;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+
+.text-field-hover__input_style::placeholder {
+	color: $dark-shade-75;
+}

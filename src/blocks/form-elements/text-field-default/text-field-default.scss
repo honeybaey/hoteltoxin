@@ -1,0 +1,46 @@
+.text-field-default_wrapper {
+	/*display: flex;
+	justify-content: space-between;
+	align-content: center;
+	padding-bottom: 5px;*/
+	padding: 140px 0 0 140px;
+}
+
+.text-field-default__label_style {
+	font: $font-label;
+	text-transform: uppercase;
+	color: $dark-shade-100;
+}
+
+.text-field-default__input_style {
+	outline: none;
+	font: $font-text;
+	color: $dark-shade-25;
+	padding: 10px;
+	width: 300px;
+	border: 1px solid $dark-shade-25;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+
+.text-field-default__input_style:hover,
+.text-field-default__input_style:focus {
+	font: $font-text;
+	color: $dark-shade-75;
+	border: 1px solid $dark-shade-50;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+
+.text-field-default__input_style:hover::placeholder,
+.text-field-default__input_style:focus::placeholder {
+	color: $dark-shade-75;
+}
+
+

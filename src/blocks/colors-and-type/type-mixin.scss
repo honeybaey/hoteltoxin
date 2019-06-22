@@ -1,0 +1,45 @@
+.colors-and-type_wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+//colors
+.first {
+	background-color: $dark-shade-100;
+}
+.second {
+	background-color: $dark-shade-75;
+}
+.third {
+	background-color: $dark-shade-50;
+}
+.fourth {
+	background-color: $dark-shade-25;
+}
+.fifth {
+	background-color: $dark-shade-5;
+}
+.sixth {
+	background-color: $purple;
+}
+.seventh {
+	background-color: $green;
+}
+
+//text
+.typography {
+  max-width: 39%;
+}
+
+.typography_title {
+	font: $font-title;
+}
+.typography_subtitle {
+	font: $font-subtitle;
+}
+.typography_label {
+	font: $font-label;
+}
+.typography_body {
+	font: $font-text;
+}

@@ -1,0 +1,47 @@
+.date-dropdown_wrapper {
+	padding-left: 140px;
+}
+
+.date-dropdown__label_style {
+	font: $font-label;
+	text-transform: uppercase;
+	color: $dark-shade-100;
+}
+
+.date-dropdown__input_style {
+	outline: none;
+	font: $font-text;
+	color: $dark-shade-25;
+	padding: 10px;
+	height: 25px;
+	width: 150px;
+	border: 1px solid $dark-shade-25;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: url(/src/img/expand_more.png) no-repeat 90% 50%;
+}
+
+.date-dropdown__input_style:hover,
+.date-dropdown__input_style:focus {
+	font: $font-text;
+	color: $dark-shade-75;
+	border: 1px solid $dark-shade-50;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+
+.date-dropdown__input_style:hover::placeholder,
+.date-dropdown__input_style:focus::placeholder {
+	color: $dark-shade-75;
+}
+
+

@@ -1,0 +1,25 @@
+.colors__color-type_wrapper {
+	display: flex;
+	align-items: center;
+	padding-bottom: 20px;
+}
+
+.colors__mixin {
+	width: 70px;
+	height: 70px;
+	border-radius: 6px;
+
+		&_padding {
+			padding-left: 40px;
+		}
+
+		&_call {
+			font: bold 1.3571rem $font-family;
+		}
+
+		&_consist {
+			font: normal 1.3571rem $font-family;
+		}
+
+
+}
