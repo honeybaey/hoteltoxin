@@ -27,20 +27,8 @@
 	background: url(/src/img/expand_more.png) no-repeat 90% 50%;
 }
 
-.date-dropdown__input_style:hover,
-.date-dropdown__input_style:focus {
-	font: $font-text;
-	color: $dark-shade-75;
-	border: 1px solid $dark-shade-50;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
-}
-
-.date-dropdown__input_style:hover::placeholder,
-.date-dropdown__input_style:focus::placeholder {
+.date-dropdown__input_style::placeholder,
+.date-dropdown__input_style::placeholder {
 	color: $dark-shade-75;
 }
 
