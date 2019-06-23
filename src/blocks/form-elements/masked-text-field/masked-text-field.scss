@@ -24,10 +24,9 @@
 	-moz-border-radius: 4px;
 	-ms-border-radius: 4px;
 	-o-border-radius: 4px;
-}
 
-.masked-text-field__input_style:hover,
-.masked-text-field__input_style:focus {
+	&:hover,
+	&:focus {
 	font: $font-text;
 	color: $dark-shade-75;
 	padding: 10px;
@@ -38,6 +37,7 @@
 	-moz-border-radius: 4px;
 	-ms-border-radius: 4px;
 	-o-border-radius: 4px;
+	}
 }
 
 .masked-text-field__input_style:hover::placeholder,

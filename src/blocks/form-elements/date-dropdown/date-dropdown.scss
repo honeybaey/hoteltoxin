@@ -25,11 +25,10 @@
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	background: url(/src/img/expand_more.png) no-repeat 90% 50%;
-}
 
-.date-dropdown__input_style::placeholder,
-.date-dropdown__input_style::placeholder {
-	color: $dark-shade-75;
+	&::placeholder {
+		color: $dark-shade-75;
+	}
 }
 
 

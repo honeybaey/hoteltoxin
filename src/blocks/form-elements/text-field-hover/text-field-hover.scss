@@ -20,8 +20,8 @@
 	-moz-border-radius: 4px;
 	-ms-border-radius: 4px;
 	-o-border-radius: 4px;
-}
 
-.text-field-hover__input_style::placeholder {
-	color: $dark-shade-75;
+	&::placeholder {
+		color: $dark-shade-75;
+	}
 }
