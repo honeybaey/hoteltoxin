@@ -9,12 +9,13 @@
 }
 
 .date-dropdown__input_style {
+	text-align: center;
 	outline: none;
 	font: $font-text;
 	color: $dark-shade-25;
-	padding: 10px;
-	height: 25px;
-	width: 150px;
+	padding-right: 20px;
+	height: 40px;
+	width: 128px;
 	border: 1px solid $dark-shade-25;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -31,4 +32,9 @@
 	}
 }
 
+.date-dropdown_wrapper_2 {
+	max-width: 320px;
+	display: flex;
+	justify-content: space-between;
+}
 

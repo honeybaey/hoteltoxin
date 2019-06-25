@@ -16,8 +16,9 @@
 	outline: none;
 	font: $font-text;
 	color: $dark-shade-25;
-	padding: 10px;
-	width: 300px;
+	padding-left: 15px;
+	height: 40px;
+	width: 303px;
 	border: 1px solid $dark-shade-25;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -27,14 +28,8 @@
 
 	&:hover,
 	&:focus {
-		font: $font-text;
 		color: $dark-shade-75;
 		border: 1px solid $dark-shade-50;
-		border-radius: 4px;
-		-webkit-border-radius: 4px;
-		-moz-border-radius: 4px;
-		-ms-border-radius: 4px;
-		-o-border-radius: 4px;
 	}
 }
 
