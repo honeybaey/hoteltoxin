@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
@@ -70,6 +71,9 @@ module.exports = {
 			template: './src/pug/index.pug',
 		}
 		),
+		new CopyWebpackPlugin([
+      { from: './src/img', to: './img' },
+    ]),
 		new webpack.ProvidePlugin(
 			{
 			$: 'jquery',
