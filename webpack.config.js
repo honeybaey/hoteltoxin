@@ -6,8 +6,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
-
-
 module.exports = {  
 	entry: [ 
 		'./src/index.js',
@@ -15,12 +13,27 @@ module.exports = {
 	output: {    
 		path: path.resolve(__dirname, './dist'),
 		filename: './js/main.js', 
+		// publicPath: '/dist',
 	},
 	module: {  
 		rules: [   
 			{
 				test: /\.scss$/,
-				use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+				// use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+				use: [{
+					loader: 'style-loader',
+			},	{
+					loader: MiniCssExtractPlugin.loader,
+			},
+			 {
+					loader: 'css-loader',
+					options: {
+						url: true,
+					},
+			},
+			 {
+					loader: 'sass-loader',
+			}]
 			},
 			{
 				test: /\.pug$/,
@@ -35,6 +48,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
+							publicPath: '../img/',
 							name: '[name].[ext]',
 							outputPath: './img',
             },
@@ -66,13 +80,13 @@ module.exports = {
 		),
 		new HtmlWebpackPlugin(
 			{
-			//filename: './html/index.html',
 			filename: 'index.html',
 			template: './src/pug/index.pug',
 		}
 		),
 		new CopyWebpackPlugin([
-      { from: './src/img', to: './img' },
+			{ from: './src/img', to: './img' },
+			{ from: './src/static', to: './static' },
     ]),
 		new webpack.ProvidePlugin(
 			{
