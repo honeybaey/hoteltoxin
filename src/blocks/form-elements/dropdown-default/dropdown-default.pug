@@ -1,8 +1,23 @@
-mixin dropdown-default(name)
+mixin dropdown-default
 
-	.dropdown-default
-		.dropdown-default_wrapper
-			label(for='dropdown' class='dropdown-default__label_style')
-				p Dropdown
-			select(id='dropdown' name='dropdown' class='dropdown-default__input_style' placeholder= name)
-				option(value='' selected)= name
+  .dropdown-default
+   .dropdown-default_wrapper
+    label(class="dropdown-default__label-style" for="dropdown-default")
+      p Dropdown default
+    .iqdropdown
+      p.iqdropdown-selection
+      .iqdropdown-menu
+        .iqdropdown-menu-option(data-id="item1")
+          div
+            p.iqdropdown-item Мужчины
+        .iqdropdown-menu-option(data-id="item2")
+          div
+            p.iqdropdown-item Женщины
+        .iqdropdown-menu-option(data-id="item3")
+          div
+            p.iqdropdown-item Дети
+
+
+
+
+
