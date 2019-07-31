@@ -5,4 +5,6 @@
 @import '../blocks/colors-and-type/type-mixin.scss';
 @import '../blocks/colors-and-type/colors-mixin/colors__mixin.scss';
 @import '../blocks/colors-and-type/type-mixin/text__mixin.scss';
-@import '../blocks/form-elements/form-elements.scss'
+@import '../blocks/form-elements/form-elements.scss';
+@import '../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+@import 'itemDropdown.scss';
