@@ -30,7 +30,17 @@ module.exports = {
 					options: {
 						url: true,
 					},
-			},
+      },
+      {
+        loader: 'postcss-loader',
+        options: {
+          plugins: function () { // post css plugins, can be exported to postcss.config.js
+            return [
+              require('autoprefixer')
+            ];
+          }
+        }
+      },
 			 {
 					loader: 'sass-loader',
 			}]
@@ -94,6 +104,6 @@ module.exports = {
 			jQuery: 'jquery',
 			'window.jQuery': 'jquery',
 		}
-		),
+    ),
 	]
 };
