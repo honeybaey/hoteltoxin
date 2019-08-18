@@ -25,7 +25,8 @@
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	background: url(/src/img/expand_more.png) no-repeat 90% 50%;
+	background: url('../img/expand_more.png') no-repeat 90% 50%;
+	cursor: pointer;
 
 	&::placeholder {
 		color: $dark-shade-75;
