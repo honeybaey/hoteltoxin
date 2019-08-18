@@ -3,7 +3,6 @@
 Use: 
 
 - JavaScript
-- jQuery
 - SCSS
 - PUG
 - Webpack
