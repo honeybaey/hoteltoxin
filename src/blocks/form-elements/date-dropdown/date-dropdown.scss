@@ -21,10 +21,10 @@
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
-	appearance: none;
-	-webkit-appearance: none;
+  -o-border-radius: 4px;
+  -webkit-appearance: none;
 	-moz-appearance: none;
+	appearance: none;
 	// background: url('../img/expand_more.png') no-repeat 90% 50%;
   cursor: pointer;
 
@@ -39,15 +39,16 @@
 	justify-content: space-between;
 }
 
-.icon::after {
+.date-dropdown_icon::before {
   font-family: 'Material Icons';
   content: '\e5cf';
   position: relative;
-  left: 120px;
-  top: 82px;
+  right: 34px;
+  top: 7px;
   font-size: 24px;
   color: rgba(31, 32, 65, 0.5);
   font-weight: 100;
   cursor: pointer;
+  pointer-events: none;
 }
 
