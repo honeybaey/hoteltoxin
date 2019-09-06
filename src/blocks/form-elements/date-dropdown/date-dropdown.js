@@ -1,8 +1,9 @@
+$('#date-dropdown').datepicker();
 $('#date-dropdown_start').datepicker();
 $('#date-dropdown_end').datepicker();
 
-var okButton = '<span class="datepicker--button" data-action="hide">ПРИМЕНИТЬ</span>'; 
-$('.datepicker--button[data-action="clear"]').each(function( index ) { $(okButton).insertBefore($(this)); });
+var applyButton = '<span class="datepicker--button datepicker--button__apply" data-action="hide">Применить</span>'; 
+$('.datepicker--button[data-action="clear"]').each(function( index ) { $(applyButton).insertBefore($(this)); });
 
 /* var $start = $('#start'),
     $end = $('#end');
