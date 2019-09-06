@@ -33,12 +33,6 @@
 	}
 }
 
-.date-dropdown_wrapper_2 {
-	max-width: 320px;
-	display: flex;
-	justify-content: space-between;
-}
-
 .date-dropdown_icon::before {
   font-family: 'Material Icons';
   content: '\e5cf';
@@ -52,3 +46,45 @@
   pointer-events: none;
 }
 
+// Extra styles for datepicker // 
+
+.datepicker--nav-title,
+.datepicker--nav-title i {
+  font-family: 'Open Sans';
+  color: $dark-shade-100;
+  font-weight: bold;
+  font-size: 1.3571rem;
+}
+
+.datepicker--nav {
+  border-bottom: none;
+}
+
+.datepicker--buttons {
+  border-top: none;
+}
+
+.datepicker--button {
+  font: $font-label;
+  color: $dark-shade-50;
+  text-transform: uppercase;
+  line-height: 1.0714rem;
+}
+
+.datepicker--button__apply {
+  color: $purple;
+}
+
+.datepicker--day-name {
+  color: $purple;
+  font: $font-label;
+  text-transform: capitalize;
+}
+
+.datepicker--cell {
+  color: $dark-shade-50;
+}
+
+.datepicker--cell.-current- {
+  color: grey;
+}
