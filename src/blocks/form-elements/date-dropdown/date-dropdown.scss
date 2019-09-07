@@ -47,13 +47,40 @@
 }
 
 // Extra styles for datepicker // 
+.datepicker {
+  width: 318px;
+  // width: 100%;
+  min-height: 345px;
+  box-shadow: none;
+  // top: 577px !important;
+}
+
+.datepicker--pointer {
+  display: none;
+}
+
+.datepicker--nav {
+  padding: 15px;
+}
+
+.datepicker--days-names {
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.datepicker--cells-days {
+  margin-top: 18px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
 
 .datepicker--nav-title,
 .datepicker--nav-title i {
   font-family: 'Open Sans';
   color: $dark-shade-100;
   font-weight: bold;
-  font-size: 1.3571rem;
+  font-size: 1.1875rem;
 }
 
 .datepicker--nav {
@@ -69,22 +96,71 @@
   color: $dark-shade-50;
   text-transform: uppercase;
   line-height: 1.0714rem;
+  position: relative;
+  right: 182px;
+  bottom: 6px;
+  font-size: 0.75rem;
+  &:hover {
+    background: none;
+    color: $dark-shade-50;
+  }
 }
 
 .datepicker--button__apply {
   color: $purple;
+  position: relative;
+  left: 175px;
+  &:hover {
+    color: $purple;
+  }
 }
 
 .datepicker--day-name {
   color: $purple;
-  font: $font-label;
+  font-family: 'Montserrat';
+  font-size: 0.75rem;
+  font-weight: bold;
   text-transform: capitalize;
 }
 
 .datepicker--cell {
   color: $dark-shade-50;
+  height: 26px;
+}
+
+.datepicker--cell-day {
+  font-family: 'Montserrat';
+  font-size: 0.75rem;
+  margin-bottom: 15px;
 }
 
 .datepicker--cell.-current- {
-  color: grey;
+  color: white;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 22px;
+  // height: 40px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+  }
+  &::before {
+    content: '';
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  }
+}
+
+.datepicker--cell.-selected- {
+  color: white;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  height: 40px;
+  font-weight: bold;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.datepicker--cell.-selected-.-focus- {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
