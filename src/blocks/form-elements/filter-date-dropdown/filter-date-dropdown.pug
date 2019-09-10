@@ -1,0 +1,7 @@
+mixin filter-date-dropdown(name)
+
+  .filter-date-dropdown_wrapper
+    label(for='filter-date-dropdown' class='filter-date-dropdown__label_style')
+      p=name
+    input(id='filter-date-dropdown' readonly data-range='true' data-multiple-dates-separator=' - ' class='filter-date-dropdown__input_style' placeholder= 'ДД.ММ.ГГГГ')
+    span(class="filter-date-dropdown_icon")
