@@ -1,6 +1,7 @@
-mixin dropdown-comfort
+mixin dropdown-comfort(name)
 
-  .dropdown-guest_wrapper
+  .dropdown-comfort_wrapper
     label(for="dropdownComfort" class="dropdown-comfort__label_style")
-        p Dropdown
-    input(id="dropdown" readonly name="NCS" type="text" placeholder="Параметры комнаты")
+        p=name
+    input(id="dropdownComfort" class="dropdown-comfort__input_style" readonly name="comfort" type="text" placeholder="Параметры комнаты")
+    span(class="dropdown-comfort_icon")
