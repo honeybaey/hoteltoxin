@@ -1,9 +1,11 @@
-.date-dropdown_wrapper {
-	padding-left: 140px;
+.date-dropdown {
+  padding-left: 140px;
+  display: flex;
+  margin-bottom: 50px;
 }
 
 .date-dropdown__label_style {
-	font: $font-label;
+  font: $font-label;
 	text-transform: uppercase;
 	color: $dark-shade-100;
 }
@@ -12,7 +14,7 @@
 	text-align: center;
 	outline: none;
 	font: $font-text;
-	color: $dark-shade-25;
+	color: $dark-shade-75;
 	padding-right: 20px;
 	height: 40px;
 	width: 128px;
@@ -22,10 +24,6 @@
 	-moz-border-radius: 4px;
 	-ms-border-radius: 4px;
   -o-border-radius: 4px;
-  -webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	// background: url('../img/expand_more.png') no-repeat 90% 50%;
   cursor: pointer;
 
 	&::placeholder {
