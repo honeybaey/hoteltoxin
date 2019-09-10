@@ -194,7 +194,7 @@
           
           if ($gsum == 0) {
               $ginput.val($goriginalPlaceholder); 
-              $(".NCSG.reset").hide();
+              $(".NCSG.reset").show();
           } else {
               $ginput.val($gtext);
               $(".NCSG.reset").show();
