@@ -1,5 +1,5 @@
 $( function() {
-  $("input[name='NCS']").NCS({
+  $("input[name='comfort']").comfort({
       categoryNames: ["Спальни", "Кровати", "Ванные комнаты"],
       categoryValues: false,
       minValue: 0,

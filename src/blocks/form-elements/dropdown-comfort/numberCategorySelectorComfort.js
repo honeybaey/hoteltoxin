@@ -6,7 +6,7 @@
  */
 (function ($) {
 
-  $.fn.NCS = function (options) {
+  $.fn.comfort = function (options) {
 
       $input = $(this);
       $originalPlaceholder = $input.attr("placeholder");
@@ -35,7 +35,7 @@
 
       if (settings.closeOnOutsideClick) {
           $(document).mouseup(function (e) {
-              if (!$input.is(e.target) && !$parent.is(e.target) && $parent.has(e.target).length === 0 && !$("div.NCS.display").is(e.target) && $("div.NCS.display").has(e.target).length === 0) {
+              if (!$input.is(e.target) && !$parent.is(e.target) && $parent.has(e.target).length === 0 && !$("div.comfort.display").is(e.target) && $("div.comfort.display").has(e.target).length === 0) {
                   if (settings.fade) {
                       $parent.fadeOut(200);
                   } else {
@@ -73,7 +73,7 @@
               
           }
           if (settings.useDisplay) {
-              $display = $("div.NCS.display");
+              $display = $("div.comfort.display");
               $display.css("top", $input.position().top + 1);
               $display.css("left", $input.position().left + 1);
               $display.css("width", $input.width() - 1);
@@ -81,12 +81,12 @@
           }
       }
 
-      $("a.NCS.button.plus").click(function () {
+      $("a.comfort.button.plus").click(function () {
           $category = $(this).attr("category");
           if (settings.categoryValues[$category] < settings.maxValue) {
               settings.categoryValues[$category]++;
               $num = settings.categoryValues[$category];
-              $("div.NCS.value[category='" + $category + "']").text($num);
+              $("div.comfort.value[category='" + $category + "']").text($num);
               doCallback();
               if(settings.categoryValues[$category] == settings.maxValue){
                   $(this).addClass("inactive");
@@ -94,9 +94,9 @@
                   $(this).removeClass("inactive");
               }
               if(settings.categoryValues[$category] > settings.minValue){
-                  $("a.NCS.button.minus[category='"+$category+"']").removeClass("inactive");
+                  $("a.comfort.button.minus[category='"+$category+"']").removeClass("inactive");
               }else{
-                  $("a.NCS.button.minus[category='"+$category+"']").addClass("inactive");
+                  $("a.comfort.button.minus[category='"+$category+"']").addClass("inactive");
               }
           }
           if (settings.showText) {
@@ -109,12 +109,12 @@
           return false;
       });
 
-      $("a.NCS.button.minus").click(function () {
+      $("a.comfort.button.minus").click(function () {
           $category = $(this).attr("category");
           if (settings.categoryValues[$category] > settings.minValue) {
               settings.categoryValues[$category]--;
               $num = settings.categoryValues[$category];
-              $("div.NCS.value[category='" + $category + "']").text($num);
+              $("div.comfort.value[category='" + $category + "']").text($num);
               doCallback();
               if(settings.categoryValues[$category] == settings.minValue){
                   $(this).addClass("inactive");
@@ -122,9 +122,9 @@
                   $(this).removeClass("inactive");
               }
               if(settings.categoryValues[$category] < settings.maxValue){
-                  $("a.NCS.button.plus[category='"+$category+"']").removeClass("inactive");
+                  $("a.comfort.button.plus[category='"+$category+"']").removeClass("inactive");
               }else{
-                  $("a.NCS.button.plus[category='"+$category+"']").addClass("inactive");
+                  $("a.comfort.button.plus[category='"+$category+"']").addClass("inactive");
               }
           }
           if (settings.showText) {
@@ -139,12 +139,12 @@
 
       function updateElement() {
           $input.val("");
-          $display = $("div.NCS.inlinedisplay");
+          $display = $("div.comfort.inlinedisplay");
           $display.empty();
           $displayelements = 0;
           for ($i = 0; $i < settings.categoryNames.length; $i++) {
               if (settings.categoryValues[$i] != 0 || settings.showZero) {
-                  $displayelement = $("<div class='NCS displayelement'></div>").appendTo($display);
+                  $displayelement = $("<div class='comfort displayelement'></div>").appendTo($display);
                   $displayelement.text(settings.categoryValues[$i] + " " + settings.categoryNames[$i] + ", ");
                   $displayelements++;
               }
@@ -160,6 +160,7 @@
       function updateText() {
           $text = "";
           $added = 0;
+          $sum = 0;
           for ($i = 0; $i < settings.categoryNames.length; $i++) {
               if (settings.categoryValues[$i] != 0 || settings.showZero) {
                   if ($added != 0) {
@@ -170,6 +171,14 @@
               }
           }
           $input.val($text);
+
+        //   if ($sum == 0) {
+        //     $input.val($originalPlaceholder); 
+        //     $(".NCSG.reset").show();
+        // } else {
+        //     $input.val($text);
+        //     $(".NCSG.reset").hide();
+        // }
       }
 
 
@@ -180,13 +189,13 @@
 
               $input.attr("placeholder", "");
 
-              $display = $("<div class='NCS display'></div>").prependTo("body");
+              $display = $("<div class='comfort display'></div>").prependTo("body");
               $display.css("top", $input.position().top + 1);
               $display.css("left", $input.position().left + 1);
               $display.css("width", $input.width() - 1);
               $display.css("height", $input.height() - 1);
 
-              $("<div class='NCS inlinedisplay'></div>").prependTo($display);
+              $("<div class='comfort inlinedisplay'></div>").prependTo($display);
 
               $display.click(function () {
                   switchSelector();
@@ -194,7 +203,7 @@
           }
 
 
-          $parent = $("<div class='NCS parent'></div>").prependTo("body").hide();
+          $parent = $("<div class='comfort parent'></div>").prependTo("body").hide();
 
           switch (settings.align) {
               case "left":
@@ -205,13 +214,13 @@
           }
 
           for ($i = 0; $i < settings.categoryNames.length; $i++) {
-              $category = $("<div class='NCS category'></div>").appendTo($parent);
-              $text = $("<div class='NCS text'></div>").appendTo($category);
-              $name = $("<div class='NCS name' category='" + $i + "'>&nbsp;" + settings.categoryNames[$i] + "</div>").appendTo($text);
-              $buttons = $("<div class='NCS buttons'></div>").appendTo($category);
-              $button_minus = $("<a href='' class='NCS button minus' category='" + $i + "'>&#8211;</a>").appendTo($buttons);
-              $value = $("<div class='NCS value' category='" + $i + "'>" + settings.categoryValues[$i] + "</div>").appendTo($buttons);
-              $button_plus = $("<a href='' class='NCS button plus' category='" + $i + "'>&#43;</a>").appendTo($buttons);
+              $category = $("<div class='comfort category'></div>").appendTo($parent);
+              $text = $("<div class='comfort text'></div>").appendTo($category);
+              $name = $("<div class='comfort name' category='" + $i + "'>&nbsp;" + settings.categoryNames[$i] + "</div>").appendTo($text);
+              $buttons = $("<div class='comfort buttons'></div>").appendTo($category);
+              $button_minus = $("<a href='' class='comfort button minus' category='" + $i + "'>&#8211;</a>").appendTo($buttons);
+              $value = $("<div class='comfort value' category='" + $i + "'>" + settings.categoryValues[$i] + "</div>").appendTo($buttons);
+              $button_plus = $("<a href='' class='comfort button plus' category='" + $i + "'>&#43;</a>").appendTo($buttons);
 
               if(settings.categoryValues[$i] == settings.maxValue){
                   $button_plus.addClass("inactive");
@@ -221,7 +230,28 @@
                   $button_minus.addClass("inactive");
               }
           }
-          
+          $close = $("<div class='NCSG room'></div><a class='NCSG close' href=''>Применить</a>").appendTo($parent);
+          $close.click(function () {
+              if (settings.fade) {
+                  $parent.fadeOut(200);
+              } else {
+                  $parent.hide();
+              }
+              return false;
+          });
+          $zero = $("<div class='NCSG room'></div><a class='NCSG reset' href=''>Очистить</a>").appendTo($parent);
+          $zero.click(function() {
+          for ($i = 0; $i < settings.categoryNames.length; $i++) {
+              if (settings.categoryValues[$i] != 0 || settings.showZero) {
+                  settings.categoryValues[$i] = 0;
+                  $("div.comfort.value[category='" + $i + "']").text("0");
+                  $(".comfort.button.minus").addClass("inactive");
+                  doCallback();
+              }
+          }
+          updateText();
+          return false;
+      });
 
           if (settings.showText) {
               if (!settings.useDisplay) {
