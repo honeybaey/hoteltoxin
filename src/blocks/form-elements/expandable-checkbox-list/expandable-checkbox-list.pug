@@ -1,0 +1,20 @@
+include expandable-checkbox-item
+
+mixin expandable-checkbox-list(name)
+
+  form
+  .expandable-checkbox_wrapper
+    div(class='selectBox' id='selectBox')
+      select(class='checkbox-list')
+        option(class="expandable-checkbox__label_style")=name
+      .overSelect
+    .expandable-checkbox__items#checkboxes
+      +expandable-checkbox-item('Завтрак', 'one')
+      +expandable-checkbox-item('Письменный стол', 'two')
+      +expandable-checkbox-item('Стул для кормления', 'three')
+      +expandable-checkbox-item('Кроватка', 'for')
+      +expandable-checkbox-item('Телевизор', 'five')
+      +expandable-checkbox-item('Шампунь', 'six')
+      +expandable-checkbox-item('Телевизор', 'seven')
+      +expandable-checkbox-item('Шампунь', 'eigth')
+
