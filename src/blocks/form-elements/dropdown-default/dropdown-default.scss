@@ -1,3 +1,4 @@
+/* Plugin Styles */
 input[name='guest'] {
   height: 2.75rem;
   width: 20rem;
@@ -164,8 +165,10 @@ text-decoration: none;
 font-family: 'Montserrat';
 }
 
+/* Extra Styles */
 .dropdown-guest_wrapper {
   padding-left: 140px;
+  max-width: 320px;
 }
 
 .dropdown-guest__label_style {
@@ -180,7 +183,8 @@ font-family: 'Montserrat';
 	color: $dark-shade-25;
 	padding-left: 15px;
 	height: 40px;
-	width: 303px;
+	width: 100%;
+  box-sizing: border-box;
   border: 1px solid $dark-shade-25;
   -webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -195,12 +199,12 @@ font-family: 'Montserrat';
 }
 
 .dropdown-guest_icon { 
-  &::before {
+  &::after {
     font-family: 'Material Icons';
     content: '\e5cf';
     position: relative;
-    top: 6px;
-    right: 34px;
+    bottom: 35px;
+    left: 285px;
     font-size: 24px;
     color: rgba(31, 32, 65, 0.5);
     font-weight: 100;

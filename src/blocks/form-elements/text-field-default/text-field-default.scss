@@ -1,9 +1,6 @@
 .text-field-default_wrapper {
-	/*display: flex;
-	justify-content: space-between;
-	align-content: center;
-	padding-bottom: 5px;*/
-	padding: 140px 0 0 140px;
+  padding: 140px 0 0 140px;
+  max-width: 320px;
 }
 
 .text-field-default__label_style {
@@ -17,8 +14,9 @@
 	font: $font-text;
 	color: $dark-shade-25;
 	padding-left: 15px;
-	height: 40px;
-	width: 303px;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
   border: 1px solid $dark-shade-25;
   -webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
