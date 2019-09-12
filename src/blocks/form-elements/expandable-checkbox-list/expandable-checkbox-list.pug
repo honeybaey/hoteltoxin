@@ -4,11 +4,11 @@ mixin expandable-checkbox-list(name)
 
   form
   .expandable-checkbox_wrapper
-    div(class='selectBox' id='selectBox')
+    div(class='select-box select-box__uikit' id='selectBox')
       select(class='checkbox-list')
         option(class="expandable-checkbox__label_style")=name
-      .overSelect
-    .expandable-checkbox__items#checkboxes
+      .over-select
+    .expandable-checkbox__items.expandable-checkbox__items_uikit#checkboxes
       +expandable-checkbox-item('Завтрак', 'one')
       +expandable-checkbox-item('Письменный стол', 'two')
       +expandable-checkbox-item('Стул для кормления', 'three')
