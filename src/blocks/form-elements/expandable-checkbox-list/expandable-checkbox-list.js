@@ -1,5 +1,5 @@
 let expanded = false;
-let elem = document.querySelector('.selectBox');
+let elem = document.querySelector('.select-box');
 
 elem.onclick = showCheckboxes;
 
