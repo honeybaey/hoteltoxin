@@ -1,0 +1,40 @@
+.room-info {
+  padding-left: 140px;
+  max-width: 280px;
+}
+
+/* .room-info__uikit {
+  margin-bottom: 50px;
+} */
+
+.room-info_wrapper {
+  font-family: 'Montserrat';
+  color: $dark-shade-75;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  padding-top: 20px;
+}
+
+.room-info_title {
+  font-weight: bold;
+}
+
+.room-info_description {
+  padding-bottom: 15px;
+}
+
+.room-info_icon {
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  bottom: 5px;
+}
+
+.room-info_icon::before {
+  font-family: 'Material Icons';
+  content: '\e24e';
+  font-size: 48px;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
