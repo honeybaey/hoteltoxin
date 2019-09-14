@@ -4,6 +4,11 @@
   margin-bottom: 50px;
 }
 
+.date-dropdown_wrapper {
+  max-width: 150px;
+  margin-right: 20px;
+}
+
 .date-dropdown__label_style {
   font: $font-label;
 	text-transform: uppercase;
@@ -17,7 +22,8 @@
 	color: $dark-shade-75;
 	padding-right: 20px;
 	height: 40px;
-	width: 128px;
+  width: 100%;
+  box-sizing: border-box;
 	border: 1px solid $dark-shade-25;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -31,12 +37,12 @@
 	}
 }
 
-.date-dropdown_icon::before {
+.date-dropdown_icon::after {
   font-family: 'Material Icons';
   content: '\e5cf';
   position: relative;
-  right: 34px;
-  top: 7px;
+  left: 120px;
+  bottom: 32px;
   font-size: 24px;
   color: rgba(31, 32, 65, 0.5);
   font-weight: 100;

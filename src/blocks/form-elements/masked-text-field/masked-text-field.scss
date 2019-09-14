@@ -1,9 +1,6 @@
 .masked-text-field_wrapper {
-	/*display: flex;
-	justify-content: space-between;
-	align-content: center;
-	padding-bottom: 5px;*/
-	padding-left: 140px;
+  padding-left: 140px;
+  max-width: 320px;
 }
 
 .masked-text-field__label_style {
@@ -18,7 +15,8 @@
 	color: $dark-shade-25;
 	padding-left: 15px;
 	height: 40px;
-	width: 303px;
+  width: 100%;
+  box-sizing: border-box;
 	border: 1px solid $dark-shade-25;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
