@@ -9,7 +9,18 @@ $green: #6FCF97;
 $font-title: bold 1.7143rem Quicksand;
 $font-subtitle: bold 1.3571rem Quicksand;
 $font-label: bold 0.75rem Montserrat;
-$font-text: normal 1rem Montserrat;
+$font-text: normal 0.875rem Montserrat;
 
 $font-family: Quicksand;
+
+@mixin font-label {
+  font: $font-label;
+  text-transform: uppercase;
+  color: $dark-shade-100;
+}
+
+@mixin font-text {
+  font: $font-text;
+  color: $dark-shade-50;
+}
 
