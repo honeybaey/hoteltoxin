@@ -7,3 +7,9 @@
 @import './subscription-text-field/subscription-text-field.scss';
 @import './dropdown-comfort/dropdown-comfort.scss';
 @import './expandable-checkbox-list/expandable-checkbox-list.scss';
+@import './checkbox-buttons/checkbox-buttons.scss';
+@import './radio-buttons/radio-buttons.scss';
+
+.form-elements {
+  display: flex;
+}
