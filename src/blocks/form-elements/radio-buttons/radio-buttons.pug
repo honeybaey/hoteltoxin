@@ -1,0 +1,12 @@
+mixin radio-buttons(name)
+
+  .radio-buttons
+    p(class='radio-buttons__title_style')=name
+    .radio-buttons_wrapper
+      input(type='radio' id='radioMan' name='sex' class='radio-buttons__field')
+      label(for='radioMan' class='radio-buttons__item')
+        |Мужчина
+    .radio-buttons_wrapper
+      input(type='radio' id='radioWoman' name='sex' class='radio-buttons__field')
+      label(for='radioWoman' class='radio-buttons__item')
+        |Женщина

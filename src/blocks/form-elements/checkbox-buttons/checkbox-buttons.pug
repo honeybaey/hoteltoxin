@@ -1,0 +1,18 @@
+mixin checkbox-buttons(name)
+
+  .checkbox-buttons
+    p(class='checkbox-buttons__title_style')=name
+    +checkbox-item('Можно курить', 'checkbox-smoke')
+    +checkbox-item('Можно с питомцами', 'checkbox-pets')
+    +checkbox-item('Можно пригласить гостей (до 10 человек)', 'checkbox-guests')
+
+
+mixin checkbox-item(text, id)
+
+  .checkbox-buttons_wrapper
+    input(id=id class='checkbox-buttons__field' type='checkbox')
+    label(for=id class='checkbox-buttons__item')=text
+
+
+
+
