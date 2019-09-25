@@ -1,0 +1,60 @@
+.toggle__title_style {
+  @include font-label;
+}
+
+.toggle-name {
+  color: $dark-shade-75;
+  font: $font-text;
+  cursor: pointer;
+}
+
+.toggle__field {
+  position: relative;
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid $dark-shade-25;
+  border-radius: 10px;
+  outline: none;
+  transition: background 450ms ease;
+  margin-right: 10px;
+  top: 4px;
+  cursor: pointer;
+  
+  &:before, &:after {
+    position: absolute;
+    display: block;
+    content: "";
+    border-radius: 100%;
+    transition:
+      background 450ms ease,
+      transform 450ms ease;
+  }
+  
+  &:before {
+    width: 12px;
+    height: 12px;
+    background-color: $dark-shade-25;
+    position: relative;
+    top: 3px;
+    left: 5px;
+  }
+  
+  // active state
+  &:checked {
+    
+    &:before {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      -webkit-transform: translateX(17px);
+      -moz-transform: translateX(17px);
+      -ms-transform: translateX(17px);
+      -o-transform: translateX(17px);
+      transform: translateX(17px);
+}
+  }
+}
+
+.toggle__field:checked {
+  border: 1px solid #BC9CFF;
+}
