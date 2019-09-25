@@ -19,9 +19,13 @@
 	left: 0;
 	width: 18px;
 	height: 18px;
-	border: 1px solid #BC9CFF;
+	border: 1px solid $dark-shade-25;
 	border-radius: 50%;
 	background: #FFF;
+}
+
+.radio-buttons__field:checked + label:before {
+	border: 1px solid #BC9CFF;
 }
 
 .radio-buttons__field + label:after {
@@ -57,5 +61,5 @@
 }
 
 .radio-buttons__item {
-  @include font-text;
+  @include font-texts;
 }
