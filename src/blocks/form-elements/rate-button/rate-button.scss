@@ -1,0 +1,56 @@
+.rate-button {
+  font-size: 0;
+  * {
+    font-size: 1.5rem;
+  }
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  & > input {
+    display: none;
+    & + label {
+      display: inline-block;
+      overflow: hidden;
+      text-indent: 9999px;
+      width: 1em;
+      white-space: nowrap;
+      cursor: pointer;
+      &:before {
+        display: inline-block;
+        text-indent: -9999px;
+        font-family: 'Material Icons';
+        content: '\e83a';
+        color: #BC9CFF;
+      }
+    }
+    &:checked ~ label:before,
+      & + label:hover ~ label:before,
+      & + label:hover:before {
+      font-family: 'Material Icons';
+      content: '\e838';
+      color: #BC9CFF;
+    }
+  }
+  
+  & > .rate-button + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+  }
+  & > .rate-button + label:before {
+    width: .5em;
+  }
+
+  &:hover > input + label:before {
+    content: '\e83a';
+    color: #BC9CFF;
+  }
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before {
+    content: '\e838';
+    color: #BC9CFF;
+  }
+}
+
+.rate-button__title {
+  @include font-label;
+}

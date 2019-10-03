@@ -1,0 +1,57 @@
+.rich-checkbox-buttons_wrapper {
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+.rich-checkbox-buttons__title {
+  @include font-label;
+}
+
+.rich-checkbox-buttons__item {
+  font: $font-text;
+  color: $dark-shade-75;
+  margin-left: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.rich-checkbox-buttons__description {
+  @include font-texts;
+  font-size: 0.75rem;
+  padding-left: 27px;
+  max-width: 220px;
+  margin: 0;
+}
+
+.rich-checkbox-buttons__field {
+  display: none;
+}
+
+.rich-checkbox-buttons__item::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: -10px;
+  margin-right: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.rich-checkbox-buttons__field + label::after {
+  content: none;
+}
+
+.rich-checkbox-buttons__field:checked + label::before {
+  font-family: 'Material Icons';
+  content: '\e5ca';
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}

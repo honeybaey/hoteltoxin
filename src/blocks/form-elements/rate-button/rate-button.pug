@@ -1,0 +1,18 @@
+mixin rate-button(name)
+
+  p(class='rate-button__title')=name
+    .rate-button_wrapper
+      form
+        span(class='rate-button')
+          input(id='rate5' type='radio', name='rating', value='5')
+          label(for='rate5') 
+          input(id='rate4' type='radio', name='rating', value='4')
+          label(for='rate4') 
+          input(id='rate3' type='radio', name='rating', value='3')
+          label(for='rate3') 
+          input(id='rate2' type='radio', name='rating', value='2')
+          label(for='rate2') 
+          input(id='rate1' type='radio', name='rating', value='1')
+          label(for='rate1') 
+          input(id='rate0' type='radio', name='rating', value='0')
+          label(for='rate0')

@@ -1,0 +1,16 @@
+mixin rich-checkbox-buttons(name)
+
+  .rich-checkbox-buttons
+    p(class='rich-checkbox-buttons__title')=name
+    +rich-checkbox-item('Широкий коридор', 'checkbox-hall', 'Ширина коридоров в номере не менее 91 см.')
+    +rich-checkbox-item('Помощник для инвалидов', 'checkbox-invalids', 'На 1 этаже вас встретит специалист  и проводит до номера.')
+
+
+mixin rich-checkbox-item(text, id, description)
+
+  .rich-checkbox-buttons_wrapper
+    input(id=id class='rich-checkbox-buttons__field' type='checkbox')
+    label(for=id class='rich-checkbox-buttons__item')=text
+    p(class='rich-checkbox-buttons__description')=description
+
+
