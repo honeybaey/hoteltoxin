@@ -11,9 +11,12 @@ include ./room-info/room-info
 include ./checkbox-buttons/checkbox-buttons
 include ./radio-buttons/radio-buttons
 include ./toggle/toggle
+include ./like-button/like-button
+include ./rate-button/rate-button
+include ./rich-checkbox-buttons/rich-checkbox-buttons
 
 .form-elements
-  .form-elements__column-1
+  .form-elements__item
     +text-field-default('Email')
     +text-field-hover('This is pretty awesome')
     +dropdown-default('Dropdown')
@@ -25,7 +28,10 @@ include ./toggle/toggle
     +expandable-checkbox-list('Expandable Checkbox List')
     +room-info('Комфорт', 'Шумопоглощающие стены')
     +room-info('Удобство', 'Окно в каждой из спален')
-  .form-elements__column-2
+  .form-elements__item
     +checkbox-buttons('Checkbox Buttons')
     +radio-buttons('Radio Buttons')
     +toggle('Toggle', 'Получать спецпредложения')
+    +like-button('Like Button')
+    +rate-button('Rate Button')
+    +rich-checkbox-buttons('Rich Checkbox Buttons')

@@ -10,7 +10,14 @@
 @import './checkbox-buttons/checkbox-buttons.scss';
 @import './radio-buttons/radio-buttons.scss';
 @import './toggle/toggle.scss';
+@import './like-button/like-button.scss';
+@import './rate-button/rate-button.scss';
+@import './rich-checkbox-buttons/rich-checkbox-buttons.scss';
 
 .form-elements {
   display: flex;
+}
+
+.form-elements__item {
+  margin-right: 100px;
 }
