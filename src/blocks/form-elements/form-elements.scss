@@ -13,11 +13,12 @@
 @import './like-button/like-button.scss';
 @import './rate-button/rate-button.scss';
 @import './rich-checkbox-buttons/rich-checkbox-buttons.scss';
+@import './feedback/feedback.scss';
 
 .form-elements {
   display: flex;
 }
 
 .form-elements__item {
-  margin-right: 100px;
+  margin-right: 20px;
 }

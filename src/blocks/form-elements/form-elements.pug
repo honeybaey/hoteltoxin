@@ -14,6 +14,7 @@ include ./toggle/toggle
 include ./like-button/like-button
 include ./rate-button/rate-button
 include ./rich-checkbox-buttons/rich-checkbox-buttons
+include ./feedback/feedback
 
 .form-elements
   .form-elements__item
@@ -32,6 +33,13 @@ include ./rich-checkbox-buttons/rich-checkbox-buttons
     +checkbox-buttons('Checkbox Buttons')
     +radio-buttons('Radio Buttons')
     +toggle('Toggle', 'Получать спецпредложения')
-    +like-button('Like Button')
+    +like-button('Like Button', '2')
     +rate-button('Rate Button')
     +rich-checkbox-buttons('Rich Checkbox Buttons')
+    +feedback({
+                name: 'Мурад Сарафанов',
+                date: '2019-10-01',
+                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                image: 'user1',
+              })
+  .form-elements__item
