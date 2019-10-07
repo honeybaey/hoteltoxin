@@ -1,0 +1,55 @@
+.btn__title {
+  @include font-label;
+}
+
+.btn_wrapper {
+  max-width: 101px;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  @include font-label;
+  color: #FFFFFF;
+  padding: 14px 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  transition-duration: 300ms;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
+
+.btn_border {
+  background: #fff;
+  border: 2px solid #BC9CFF;
+  color: #BC9CFF;
+}
+
+.btn_ui-kit {
+  margin-bottom: 10px;
+}
+
+.btn_pay {
+  box-sizing: border-box;
+  width: 320px;
+  height: 44px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 2px;
+  &::after {
+    font-family: 'Material Icons';
+    content: '\e5c8';
+    font-size: 1.5rem;
+    position: relative;
+    left: 65px;
+    top: 7px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 300;
+  }
+}

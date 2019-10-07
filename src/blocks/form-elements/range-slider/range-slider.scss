@@ -1,0 +1,46 @@
+.range-slider_wrapper {
+  width: 266px;
+  box-sizing: border-box;
+  padding-top: 140px;
+}
+
+.range-slider__title {
+  @include font-label; 
+}
+
+.range-slider__value {
+  @include font-texts;
+  font-size: 0.75rem;
+  position: relative;
+  left: 150px;
+  bottom: 28px;
+}
+
+/* Styles of noUiSlider */
+.noUi-connect {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.noUi-target {
+  height: 6px;
+  box-sizing: border-box;
+}
+
+.noUi-horizontal .noUi-handle {
+  height: 12px;
+  width: 12px;
+  box-sizing: content-box;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  outline: none;
+  position: relative;
+  border: 2px solid #FFFFFF;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+  &::before, &::after {
+    content: none;
+  }
+}
