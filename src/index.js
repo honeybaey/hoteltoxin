@@ -10,3 +10,5 @@ import './blocks/form-elements/dropdown-comfort/dropdown-comfort';
 import './blocks/form-elements/dropdown-comfort/numberCategorySelectorComfort';
 import './blocks/form-elements/expandable-checkbox-list/expandable-checkbox-list';
 import './blocks/form-elements/like-button/like-button';
+import './blocks/form-elements/range-slider/range-slider.js';
+import './blocks/form-elements/range-slider/nouislider';
