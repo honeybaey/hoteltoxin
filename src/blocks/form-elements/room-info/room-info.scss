@@ -1,9 +1,9 @@
 .room-info {
-  padding-left: 140px;
+  padding-left: 20px;
   max-width: 280px;
 }
 
-/* .room-info__uikit {
+/* .room-info_uikit {
   margin-bottom: 50px;
 } */
 
@@ -14,25 +14,21 @@
   padding-top: 20px;
 }
 
-.room-info_title {
+.room-info__title {
   font-weight: bold;
 }
 
-.room-info_description {
+.room-info__description {
   padding-bottom: 15px;
 }
 
 .room-info_icon {
+  font-family: 'Material Icons';
+  font-size: 48px;
   float: left;
   margin-right: 10px;
   position: relative;
   bottom: 5px;
-}
-
-.room-info_icon::before {
-  font-family: 'Material Icons';
-  content: '\e24e';
-  font-size: 48px;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;

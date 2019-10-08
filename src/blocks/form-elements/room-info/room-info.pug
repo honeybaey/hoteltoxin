@@ -1,7 +1,7 @@
-mixin room-info(name, description)
+mixin room-info(name, description, iconName)
 
-  .room-info.room-info__uikit
+  .room-info.room-info_uikit
     .room-info_wrapper
-      .room-info_icon
-      span(class='room-info_title')=name
-      p(class='room-info_description')=description
+      .room-info_icon=iconName
+      span(class='room-info__title')=name
+      p(class='room-info__description')=description
