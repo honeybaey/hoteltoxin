@@ -1,7 +1,6 @@
-mixin subscription-text-field(text)
+mixin subscription-text-field(text, name)
 
-  .subscription-text-field
-    .subscription-text-field_wrapper
-      label(for='some-text' class='subscription-text-field__label_style') 
-        p Subscription Text Field
-      input(id='some-text' type="email" name='some-info' class='subscription-text-field__input_style' placeholder= text)
+  .subscription-text-field_wrapper
+    label(for='subscribe' class='subscription-text-field__label') 
+      p=name
+    input(id='subscribe' type="email" name='some-info' class='subscription-text-field__input' placeholder= text)

@@ -1,15 +1,13 @@
-.masked-text-field_wrapper {
-  padding-left: 140px;
+.masked-text-field {
+  padding-left: 20px;
   max-width: 320px;
 }
 
-.masked-text-field__label_style {
-	font: $font-label;
-	text-transform: uppercase;
-	color: $dark-shade-100;
+.masked-text-field__title {
+  @include font-label;
 }
 
-.masked-text-field__input_style {
+.masked-text-field__input {
 	outline: none;
 	font: $font-text;
 	color: $dark-shade-25;
@@ -28,12 +26,8 @@
 	&:focus {
 	color: $dark-shade-75;
 	border: 1px solid $dark-shade-50;
-	}
+  }
 }
 
-.masked-text-field__input_style:hover::placeholder,
-.masked-text-field__input_style:focus::placeholder {
-	color: $dark-shade-75;
-}
 
 

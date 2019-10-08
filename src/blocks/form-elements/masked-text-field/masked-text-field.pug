@@ -1,7 +1,6 @@
-mixin masked-text-field
+mixin masked-text-field(name)
 
-	.masked-text-field
-		.masked-text-field_wrapper
-			label(for='date-field' class='masked-text-field__label_style')
-				p Masked Text Field
-				input(id='date-field' name='date' class='masked-text-field__input_style')
+  .masked-text-field
+    label(for='dateField' class='masked-text-field__title')
+      p=name
+      input(id='dateField' name='date' class='masked-text-field__input')

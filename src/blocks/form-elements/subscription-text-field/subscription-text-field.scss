@@ -1,5 +1,5 @@
 .subscription-text-field_wrapper {
-  padding-left: 140px;
+  padding-left: 20px;
   max-width: 266px;
 
   &::after {
@@ -17,13 +17,11 @@
   }
 }
 
-.subscription-text-field__label_style {
-	font: $font-label;
-	text-transform: uppercase;
-	color: $dark-shade-100;
+.subscription-text-field__label {
+	@include font-label;
 }
 
-.subscription-text-field__input_style {
+.subscription-text-field__input {
 	outline: none;
 	font: $font-text;
 	color: $dark-shade-75;

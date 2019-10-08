@@ -1,6 +1,5 @@
-mixin toggle(name, text)
+mixin toggle(text)
 
-  p(class='toggle__title_style')=name
   .toggle_wrapper
     input(type='checkbox' class='toggle__field' id='toggleText')
     label(class='toggle-name' for='toggleText')=text

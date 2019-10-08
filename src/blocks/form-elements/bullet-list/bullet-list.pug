@@ -1,6 +1,7 @@
-mixin bullet-list
+mixin bullet-list(name)
 
   .bullet-list
+    p.bullet-list__title=name
     ul.bullet-list_wrapper
       +bullet-item('Нельзя с питомцами')
       +bullet-item('Без вечеринок и мероприятий')

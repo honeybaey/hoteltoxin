@@ -2,6 +2,10 @@
   padding: 0;
 }
 
+.bullet-list__title {
+  @include font-label;
+}
+
 .bullet-list__item {
   font: $font-text;
   color: $dark-shade-75;
