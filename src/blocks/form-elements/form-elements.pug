@@ -1,5 +1,4 @@
-include ./text-field-default/text-field-default
-include ./text-field-hover/text-field-hover
+include ./text-field/text-field
 include ./dropdown-default/dropdown-default
 include ./masked-text-field/masked-text-field
 include ./date-dropdown/date-dropdown
@@ -22,24 +21,44 @@ include ./bullet-list/bullet-list
 
 .form-elements
   .form-elements__item
-    +text-field-default('Email')
-    +text-field-hover('This is pretty awesome')
-    +dropdown-default('Dropdown')
-    +masked-text-field
-    +date-dropdown('Date Dropdown')
-    +filter-date-dropdown('Filter Date Dropdown')
-    +subscription-text-field('Email')
-    +dropdown-comfort('Dropdown')
-    +expandable-checkbox-list('Expandable Checkbox List')
-    +room-info('Комфорт', 'Шумопоглощающие стены')
-    +room-info('Удобство', 'Окно в каждой из спален')
+    div
+      p.text-field__title Text Field
+      +text-field('Email')
+    div
+      +dropdown-default('Dropdown')
+    div
+      +masked-text-field('Masked Text Field')
+    div
+      +date-dropdown('Date Dropdown', 'Date Dropdown')
+    div
+      +filter-date-dropdown('Filter Date Dropdown')
+    div
+      +subscription-text-field('Email', 'Subscription Text Field')
+    div
+      +dropdown-comfort('Dropdown')
+    div
+      +expandable-checkbox-list('Expandable Checkbox List')
+    div
+      +room-info('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
+    div
+      +room-info('Удобство', 'Окно в каждой из спален', 'location_city')
   .form-elements__item
-    +checkbox-buttons('Checkbox Buttons')
-    +radio-buttons('Radio Buttons')
-    +toggle('Toggle', 'Получать спецпредложения')
-    +like-button('Like Button', '2')
-    +rate-button('Rate Button')
-    +rich-checkbox-buttons('Rich Checkbox Buttons')
+    div
+      +checkbox-buttons('Checkbox Buttons')
+    div
+      p(class='radio-buttons__title') Radio Buttons
+      +radio-buttons
+    div
+      p(class='toggle__title') Toggle
+      +toggle('Получать спецпредложения')
+    div
+      p(class='like-button__title') Like Button
+      +like-button('2')
+    div
+      p(class='rate-button__title') Rate Button
+      +rate-button
+    div
+      +rich-checkbox-buttons('Rich Checkbox Buttons')
     //- div
     //-   +feedback({
     //-               name: 'Мурад Сарафанов',
@@ -48,15 +67,15 @@ include ./bullet-list/bullet-list
     //-               image: 'user1',
     //-             })
   .form-elements__item
-    +range-slider('Range Slider')
     div
-      p(class='btn_title') Buttons
+      +range-slider('Range Slider')
+    div
+      p(class='btn__title') Buttons
       +btn('Click me', 'btn btn_ui-kit')
       +btn('Click me', 'btn btn_border btn_ui-kit')
       +btn('Перейти к оплате', 'btn btn_pay')
       div
-        p(class='pagination_title') Pagination
+        p(class='pagination__title') Pagination
         +pager('1 – 12 из 100+ вариантов аренды', '15')
       div
-        p(class='bullet-list_title') Bullet List
-        +bullet-list
+        +bullet-list('Bullet List')
