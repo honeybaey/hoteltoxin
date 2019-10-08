@@ -1,15 +1,9 @@
-.text-field-default_wrapper {
-  padding: 140px 0 0 140px;
+.text-field {
+  padding-left: 20px;
   max-width: 320px;
 }
 
-.text-field-default__label_style {
-	font: $font-label;
-	text-transform: uppercase;
-	color: $dark-shade-100;
-}
-
-.text-field-default__input_style {
+.text-field__input {
 	outline: none;
 	font: $font-text;
 	color: $dark-shade-25;
@@ -31,8 +25,8 @@
 	}
 }
 
-.text-field-default__input_style:hover::placeholder,
-.text-field-default__input_style:focus::placeholder {
+.text-field__input:hover::placeholder,
+.text-field__input:focus::placeholder {
 	color: $dark-shade-75;
 }
 
