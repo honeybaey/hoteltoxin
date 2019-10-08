@@ -1,0 +1,19 @@
+mixin pager(description, end)
+
+  .pager_wrapper
+    nav
+      ul.pager
+        li.pager__item.active
+          a.pager__link(href='#') 1
+        li.pager__item
+          a.pager__link(href='#') 2
+        li.pager__item
+          a.pager__link(href='#') 3
+        li.pager__item
+          a.pager__link(href='#') ...
+        li.pager__item
+          a.pager__link(href='#')=end
+        li.pager__item.pager__item_next
+          a.pager__link(href='#')
+            span.pager__arrow arrow_forward
+      p.pager-description=description

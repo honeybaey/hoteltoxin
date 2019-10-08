@@ -1,0 +1,77 @@
+.pagination_wrapper {
+  width: 400px;
+  background-color: white;
+}
+
+.pager {
+  margin: 0;
+  padding: 0;
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'Montserrat';
+    font-size: 0.75rem;
+    &.active {
+      .pager__link {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    line-height: 2.625rem;
+    border-radius: 22px;
+    display: block;
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: $dark-shade-50;
+    text-decoration: none;
+    transition: 0.3s;
+    &:hover, &:focus, &:active {
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+.pager__item_next {
+  font-family: 'Material Icons';
+  font-size: 1.5rem;
+}
+
+.pager__arrow {
+  font-weight: normal;
+}
+
+.pager-description {
+  font: $font-text;
+  color: $dark-shade-50;
+}
+
+@media screen and (max-width: 576px) {
+  .pager {
+    &__item {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+      &.active, &:first-of-type, &:last-of-type, &:nth-of-type(2), &:nth-last-of-type(2) {
+        position: initial;
+        top: initial;
+        left: initial;
+      }
+    }
+    &__item.active {
+      & + li {
+        position: initial;
+        top: initial;
+        left: initial;
+      }
+    }
+  }
+}
