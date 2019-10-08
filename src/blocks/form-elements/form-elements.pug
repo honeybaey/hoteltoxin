@@ -15,6 +15,10 @@ include ./like-button/like-button
 include ./rate-button/rate-button
 include ./rich-checkbox-buttons/rich-checkbox-buttons
 include ./feedback/feedback
+include ./range-slider/range-slider
+include ./btn/btn
+include ./pagination/pagination
+include ./bullet-list/bullet-list
 
 .form-elements
   .form-elements__item
@@ -36,10 +40,23 @@ include ./feedback/feedback
     +like-button('Like Button', '2')
     +rate-button('Rate Button')
     +rich-checkbox-buttons('Rich Checkbox Buttons')
-    +feedback({
-                name: 'Мурад Сарафанов',
-                date: '2019-10-01',
-                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-                image: 'user1',
-              })
+    //- div
+    //-   +feedback({
+    //-               name: 'Мурад Сарафанов',
+    //-               date: '2019-10-01',
+    //-               text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+    //-               image: 'user1',
+    //-             })
   .form-elements__item
+    +range-slider('Range Slider')
+    div
+      p(class='btn_title') Buttons
+      +btn('Click me', 'btn btn_ui-kit')
+      +btn('Click me', 'btn btn_border btn_ui-kit')
+      +btn('Перейти к оплате', 'btn btn_pay')
+      div
+        p(class='pagination_title') Pagination
+        +pager('1 – 12 из 100+ вариантов аренды', '15')
+      div
+        p(class='bullet-list_title') Bullet List
+        +bullet-list

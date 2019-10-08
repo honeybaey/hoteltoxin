@@ -14,11 +14,16 @@
 @import './rate-button/rate-button.scss';
 @import './rich-checkbox-buttons/rich-checkbox-buttons.scss';
 @import './feedback/feedback.scss';
+@import './range-slider/range-slider.scss';
+@import './btn/btn.scss';
+@import './pagination/pagination.scss';
+@import './bullet-list/bullet-list.scss';
 
 .form-elements {
   display: flex;
+  justify-content: space-around;
 }
 
-.form-elements__item {
-  margin-right: 20px;
+.btn_title, .pagination_title, .bullet-list_title {
+  @include font-label;
 }
