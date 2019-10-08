@@ -162,17 +162,15 @@ font-family: 'Montserrat';
 
 /* Extra Styles */
 .dropdown-guest_wrapper {
-  padding-left: 140px;
+  padding-left: 20px;
   max-width: 320px;
 }
 
-.dropdown-guest__label_style {
-	font: $font-label;
-	text-transform: uppercase;
-	color: $dark-shade-100;
+.dropdown-guest__label {
+  @include font-label;
 }
 
-.dropdown-guest__input_style {
+.dropdown-guest__input {
 	outline: none;
 	font: $font-text;
 	color: $dark-shade-25;

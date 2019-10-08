@@ -1,15 +1,13 @@
 .filter-date-dropdown_wrapper {
-  padding-left: 140px;
+  padding-left: 20px;
   max-width: 266px;
 }
 
-.filter-date-dropdown__label_style {
-	font: $font-label;
-	text-transform: uppercase;
-	color: $dark-shade-100;
+.filter-date-dropdown__label {
+	@include font-label;
 }
 
-.filter-date-dropdown__input_style {
+.filter-date-dropdown__input {
 	outline: none;
 	font: $font-text;
 	color: $dark-shade-75;

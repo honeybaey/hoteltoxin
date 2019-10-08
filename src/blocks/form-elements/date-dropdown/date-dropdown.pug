@@ -1,13 +1,13 @@
-mixin date-dropdown(name)
+mixin date-dropdown(name1, name2)
 
   .date-dropdown
     .date-dropdown_wrapper
-      label(for='date-dropdown_start' class='date-dropdown__label_style')
-        p=name
-      input(id='date-dropdown_start' readonly name='date' class='date-dropdown__input_style')
+      label(for='date-dropdown_start' class='date-dropdown__label')
+        p=name1
+      input(id='date-dropdown_start' readonly name='date' class='date-dropdown__input')
       span(class="date-dropdown_icon")
     .date-dropdown_wrapper
-      label(for='date-dropdown_end' class='date-dropdown__label_style')
-        p=name
-      input(id='date-dropdown_end' readonly name='date' class='date-dropdown__input_style')
+      label(for='date-dropdown_end' class='date-dropdown__label')
+        p=name2
+      input(id='date-dropdown_end' readonly name='date' class='date-dropdown__input')
       span(class="date-dropdown_icon")

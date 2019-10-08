@@ -1,12 +1,10 @@
-include expandable-checkbox-item
-
 mixin expandable-checkbox-list(name)
 
   form
   .expandable-checkbox_wrapper
     div(class='select-box select-box__uikit' id='selectBox')
       select(class='checkbox-list')
-        option(class="expandable-checkbox__label_style")=name
+        option(class="expandable-checkbox__label")=name
       .over-select
     .expandable-checkbox__items.expandable-checkbox__items_uikit#checkboxes
       +expandable-checkbox-item('Завтрак', 'one')
@@ -17,4 +15,11 @@ mixin expandable-checkbox-list(name)
       +expandable-checkbox-item('Шампунь', 'six')
       +expandable-checkbox-item('Телевизор', 'seven')
       +expandable-checkbox-item('Шампунь', 'eigth')
+
+
+mixin expandable-checkbox-item(name, id)
+
+  .expandable-checkbox-item_wrapper
+    input(id=id class='expandable-checkbox__field' type='checkbox')
+    label(for=id class='expandable-checkbox__item')=name
 
