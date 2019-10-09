@@ -1,11 +1,10 @@
 @import '../fonts/fonts.scss';
 @import 'base.scss';
 @import 'variables.scss';
-@import '../blocks/form-elements/date-dropdown/datepicker.min.css';
+@import '../pages/ui-kit/ui-kit.scss';
+@import '../blocks/date-dropdown/datepicker.min.css';
 @import '../blocks/colors-and-type/type-mixin.scss';
 @import '../blocks/colors-and-type/colors-mixin/colors__mixin.scss';
 @import '../blocks/colors-and-type/type-mixin/text__mixin.scss';
-@import '../blocks/form-elements/form-elements.scss';
 @import '../../node_modules/item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
-@import '../blocks/form-elements/room-info/room-info.scss';
-@import '../blocks/form-elements/range-slider/nouislider.css';
+@import '../blocks/range-slider/nouislider.css';

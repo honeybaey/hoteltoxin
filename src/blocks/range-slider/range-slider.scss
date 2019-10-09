@@ -39,6 +39,7 @@
   position: relative;
   border: 2px solid #FFFFFF;
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  cursor: pointer;
 
   &::before, &::after {
     content: none;

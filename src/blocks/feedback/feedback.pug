@@ -12,7 +12,7 @@ mixin feedback(params)
       .feedback__avatar
         img(src=require(`../img/${image}.png`), alt=name)
       .feedback__likes
-        +like-button('', '12')
+        +like-button('12')
     .feedback__info
       p(class='feedback__name')=name
       p(class='feedback__date')=date
