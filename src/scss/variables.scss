@@ -24,3 +24,11 @@ $font-family: Quicksand;
   color: $dark-shade-50;
 }
 
+@mixin fontTitle {
+  font-family: Quicksand, Arial ,sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #1f2041;
+  line-height: 1.875rem;
+}
+
