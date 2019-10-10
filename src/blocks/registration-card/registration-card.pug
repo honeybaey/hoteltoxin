@@ -1,0 +1,23 @@
+include ../btn/btn
+include ../text-field/text-field
+include ../toggle/toggle
+include ../masked-text-field/masked-text-field
+include ../radio-buttons/radio-buttons
+
+mixin registration(name)
+
+  .registration
+    .registration__wrapper
+      p.registration__title=name
+      +text-field('Имя', 'text-field text-field_registration')
+      +text-field('Фамилия', 'text-field  text-field_registration')
+      +radio-buttons('radio-buttons_registration')
+      +masked-text-field('Дата рождения')
+      p.registration__text Данные для входа в сервис
+      +text-field('Email', 'text-field text-field_registration')
+      +text-field('Пароль', 'text-field text-field_registration', 'password')
+      +toggle('Получать спецпредложения', 'toggle__wrapper toggle__wrapper_registration')
+      +btn('Перейти к оплате', 'btn btn_pay')
+      div
+        span Уже есть аккаунт на Toxin
+        +btn('Войти', 'btn btn_border')
