@@ -1,28 +1,32 @@
 .text-field {
-  padding-left: 20px;
-  max-width: 320px;
-}
+  width: 320px;
+  &__input {
+    outline: none;
+    font: $font-text;
+    color: $dark-shade-25;
+    padding-left: 15px;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $dark-shade-25;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
 
-.text-field__input {
-	outline: none;
-	font: $font-text;
-	color: $dark-shade-25;
-	padding-left: 15px;
-  height: 40px;
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid $dark-shade-25;
-  -webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
-	border-radius: 4px;
-
-	&:hover,
-	&:focus {
-		color: $dark-shade-75;
-		border: 1px solid $dark-shade-50;
-	}
+    &:hover,
+    &:focus {
+      color: $dark-shade-75;
+      border: 1px solid $dark-shade-50;
+    }
+  }
+  &_ui-kit {
+    padding-left: 20px;
+  }
+  &_registration {
+    margin-bottom: 10px;
+  }
 }
 
 .text-field__input:hover::placeholder,

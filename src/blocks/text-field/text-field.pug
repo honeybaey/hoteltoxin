@@ -1,4 +1,4 @@
-mixin text-field(text)
+mixin text-field(text, classes, fieldType)
 
-  .text-field
-    input(class='text-field__input' placeholder= text)
+  div(class=classes)
+    input(class='text-field__input' placeholder=text type=fieldType)

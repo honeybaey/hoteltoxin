@@ -1,7 +1,7 @@
-mixin dropdown-default(name)
+mixin dropdown-default(name, dropdownClass)
 
-  .dropdown-guest_wrapper
-    label(for="dropdownGuest" class="dropdown-guest__label")
-      p=name
+  div(class=dropdownClass)
+    label(for="dropdownGuest")
+      p.dropdown-guest__title=name
     input(id="dropdownGuest" readonly class="dropdown-guest__input" name="guest" type="text" placeholder="Сколько гостей")
     span(class="dropdown-guest_icon")

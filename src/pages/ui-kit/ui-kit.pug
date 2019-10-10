@@ -18,18 +18,21 @@ include ../../blocks/range-slider/range-slider
 include ../../blocks/btn/btn
 include ../../blocks/pagination/pagination
 include ../../blocks/bullet-list/bullet-list
+include ../../blocks/pick-room/pick-room
+include ../../blocks/registration-card/registration-card
 
-.form-elements
-  .form-elements__item
+
+.ui-kit__form-elements
+  .ui-kit__col
     div
       p.text-field__title Text Field
-      +text-field('Email')
+      +text-field('Email', 'text-field text-field_ui-kit')
     div
-      +dropdown-default('Dropdown')
+      +dropdown-default('Dropdown', 'dropdown-guest dropdown-guest_ui-kit')
     div
-      +masked-text-field('Masked Text Field')
+      +masked-text-field('Masked Text Field', 'masked-text-field masked-text-field_ui-kit')
     div
-      +date-dropdown('Date Dropdown', 'Date Dropdown')
+      +date-dropdown('Date Dropdown', 'Date Dropdown', 'date-dropdown date-dropdown_ui-kit')
     div
       +filter-date-dropdown('Filter Date Dropdown')
     div
@@ -42,15 +45,15 @@ include ../../blocks/bullet-list/bullet-list
       +room-info('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
     div
       +room-info('Удобство', 'Окно в каждой из спален', 'location_city')
-  .form-elements__item
+  .ui-kit__col
     div
       +checkbox-buttons('Checkbox Buttons')
     div
       p(class='radio-buttons__title') Radio Buttons
-      +radio-buttons
+      +radio-buttons('radio-buttons')
     div
       p(class='toggle__title') Toggle
-      +toggle('Получать спецпредложения')
+      +toggle('Получать спецпредложения', 'toggle__wrapper')
     div
       p(class='like-button__title') Like Button
       +like-button('2')
@@ -66,7 +69,7 @@ include ../../blocks/bullet-list/bullet-list
     //-               text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
     //-               image: 'user1',
     //-             })
-  .form-elements__item
+  .ui-kit__col
     div
       +range-slider('Range Slider')
     div
@@ -79,3 +82,6 @@ include ../../blocks/bullet-list/bullet-list
         +pager('1 – 12 из 100+ вариантов аренды', '15')
       div
         +bullet-list('Bullet List')
+.ui-kit__cards
+  +pick-room('Найдём номера под ваши пожелания')
+  +registration('Регистрация аккаунта')

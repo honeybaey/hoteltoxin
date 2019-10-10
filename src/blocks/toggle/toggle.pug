@@ -1,5 +1,5 @@
-mixin toggle(text)
+mixin toggle(text, classes)
 
-  .toggle_wrapper
+  div(class=classes)
     input(type='checkbox' class='toggle__field' id='toggleText')
-    label(class='toggle-name' for='toggleText')=text
+    label(class='toggle__name' for='toggleText')=text

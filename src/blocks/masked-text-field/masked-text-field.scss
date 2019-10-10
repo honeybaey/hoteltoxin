@@ -1,6 +1,8 @@
 .masked-text-field {
-  padding-left: 20px;
-  max-width: 320px;
+  width: 320px;
+  &_ui-kit {
+    padding-left: 20px;
+  }
 }
 
 .masked-text-field__title {

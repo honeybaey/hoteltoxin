@@ -1,7 +1,12 @@
-.toggle-name {
-  color: $dark-shade-75;
-  font: $font-text;
-  cursor: pointer;
+.toggle {
+  &__wrapper_registration {
+    margin-bottom: 20px;
+  }
+  &__name {
+    color: $dark-shade-75;
+    font: $font-text;
+    cursor: pointer;
+  }
 }
 
 .toggle__field {

@@ -1,16 +1,23 @@
 .date-dropdown {
-  padding-left: 20px;
   display: flex;
-  margin-bottom: 50px;
+}
+
+.date-dropdown_ui-kit {
+  padding-left: 20px;
 }
 
 .date-dropdown_wrapper {
-  max-width: 150px;
-  margin-right: 20px;
+  width: 150px;
+  box-sizing: border-box;
+  height: 65px;
+  &:first-child {
+    margin-right: 20px;
+  }
 }
 
-.date-dropdown__label {
+.date-dropdown__title {
   @include font-label;
+  margin: 0 0 5px 0;
 }
 
 .date-dropdown__input {
@@ -35,22 +42,24 @@
 	}
 }
 
-.date-dropdown_icon::after {
+.date-dropdown_icon {
   font-family: 'Material Icons';
-  content: '\e5cf';
-  position: relative;
-  left: 120px;
-  bottom: 32px;
   font-size: 24px;
-  color: rgba(31, 32, 65, 0.5);
-  font-weight: 100;
-  cursor: pointer;
+  font-style: normal;
+  position: relative;
+  bottom: 32px;
+  left: 120px;
   pointer-events: none;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.date-dropdown_pick-room {
+  margin-bottom: 30px;
 }
 
 // Extra styles for datepicker // 
 .datepicker {
-  width: 318px;
+  width: 320px;
   // width: 100%;
   min-height: 345px;
   box-shadow: none;

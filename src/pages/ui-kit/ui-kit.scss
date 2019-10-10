@@ -18,10 +18,13 @@
 @import '../../blocks/btn/btn.scss';
 @import '../../blocks/pagination/pagination.scss';
 @import '../../blocks/bullet-list/bullet-list.scss';
+@import '../../blocks/pick-room/pick-room.scss';
+@import '../../blocks/registration-card/registration-card.scss';
 
-.form-elements {
+.ui-kit__form-elements {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .btn__title, .pagination__title, .text-field__title, .radio-buttons__title, 
@@ -31,4 +34,9 @@
 
 .text-field__title {
   padding: 140px 0 0 20px;
+}
+
+.ui-kit__cards {
+  background-color: #e5e5e5;
+  padding: 100px 0 0 90px;
 }
