@@ -12,12 +12,12 @@ mixin registration(name)
       +text-field('Имя', 'text-field text-field_registration')
       +text-field('Фамилия', 'text-field  text-field_registration')
       +radio-buttons('radio-buttons_registration')
-      +masked-text-field('Дата рождения')
+      +masked-text-field('Дата рождения', 'masked-text-field masked-text-field_registration')
       p.registration__text Данные для входа в сервис
       +text-field('Email', 'text-field text-field_registration')
       +text-field('Пароль', 'text-field text-field_registration', 'password')
       +toggle('Получать спецпредложения', 'toggle__wrapper toggle__wrapper_registration')
-      +btn('Перейти к оплате', 'btn btn_pay')
-      div
-        span Уже есть аккаунт на Toxin
+      +btn('Перейти к оплате', 'btn btn_big btn_registration')
+      div.registration__info
+        span.registration__account Уже есть аккаунт на Toxin?
         +btn('Войти', 'btn btn_border')
