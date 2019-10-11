@@ -15,4 +15,13 @@
   &__text {
     @include font-label;
   }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__account {
+    @include font-texts;
+    color: #000;
+    padding-top: 10px;
+  }
 }
