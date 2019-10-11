@@ -20,6 +20,7 @@ include ../../blocks/pagination/pagination
 include ../../blocks/bullet-list/bullet-list
 include ../../blocks/pick-room/pick-room
 include ../../blocks/registration-card/registration-card
+include ../../blocks/login/login
 
 
 .ui-kit__form-elements
@@ -76,12 +77,13 @@ include ../../blocks/registration-card/registration-card
       p(class='btn__title') Buttons
       +btn('Click me', 'btn btn_ui-kit')
       +btn('Click me', 'btn btn_border btn_ui-kit')
-      +btn('Перейти к оплате', 'btn btn_pay')
+      +btn('Перейти к оплате', 'btn btn_big')
       div
         p(class='pagination__title') Pagination
         +pager('1 – 12 из 100+ вариантов аренды', '15')
       div
         +bullet-list('Bullet List')
 .ui-kit__cards
-  +pick-room('Найдём номера под ваши пожелания')
+  +pick-room('Найдём номера под ваши пожелания', 'pick-room pick-room_cards')
   +registration('Регистрация аккаунта')
+  +login('Войти')
