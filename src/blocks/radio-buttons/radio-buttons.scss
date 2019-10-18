@@ -49,6 +49,7 @@
   color: $dark-shade-75;
 }
 
+
 /* Other styles */
 .radio-buttons {
   &__wrapper {
@@ -59,6 +60,7 @@
   }
   &__item {
     @include font-texts;
+    display: flex;
   }
   &_registration {
     margin-bottom: 20px;
