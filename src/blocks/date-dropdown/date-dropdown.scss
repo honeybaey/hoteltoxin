@@ -1,60 +1,53 @@
 .date-dropdown {
   display: flex;
-}
-
-.date-dropdown_ui-kit {
-  padding-left: 20px;
-}
-
-.date-dropdown_wrapper {
-  width: 150px;
-  box-sizing: border-box;
-  height: 65px;
-  &:first-child {
-    margin-right: 20px;
+  &__wrapper {
+    width: 150px;
+    box-sizing: border-box;
+    height: 65px;
+    &:first-child {
+      margin-right: 20px;
+    }
   }
-}
-
-.date-dropdown__title {
-  @include font-label;
-  margin: 0 0 5px 0;
-}
-
-.date-dropdown__input {
-	text-align: center;
-	outline: none;
-	font: $font-text;
-	color: $dark-shade-75;
-	padding-right: 20px;
-	height: 40px;
-  width: 100%;
-  box-sizing: border-box;
-	border: 1px solid $dark-shade-25;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  cursor: pointer;
-
-	&::placeholder {
-		color: $dark-shade-75;
-	}
-}
-
-.date-dropdown_icon {
-  font-family: 'Material Icons';
-  font-size: 24px;
-  font-style: normal;
-  position: relative;
-  bottom: 32px;
-  left: 120px;
-  pointer-events: none;
-  color: rgba(31, 32, 65, 0.5);
-}
-
-.date-dropdown_pick-room {
-  margin-bottom: 30px;
+  &__title {
+    @include font-label;
+    margin: 0 0 5px 0;
+  }
+  &__input {
+    text-align: center;
+    outline: none;
+    font: $font-text;
+    color: $dark-shade-75;
+    padding-right: 20px;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    cursor: pointer;
+    &::placeholder {
+      color: $dark-shade-75;
+    }
+  }
+  &_icon {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    font-style: normal;
+    position: relative;
+    bottom: 32px;
+    left: 120px;
+    pointer-events: none;
+    color: rgba(31, 32, 65, 0.5);
+  }
+  &_ui-kit {
+    padding-left: 20px;
+  }
+  &_pick-room {
+    margin-bottom: 20px;
+  }
 }
 
 // Extra styles for datepicker // 

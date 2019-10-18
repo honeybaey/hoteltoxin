@@ -1,12 +1,12 @@
 mixin date-dropdown(name1, name2, dropdownClass)
 
   div(class=dropdownClass)
-    .date-dropdown_wrapper
+    .date-dropdown__wrapper
       label(for='date-dropdown_start')
         p.date-dropdown__title=name1
       input(id='date-dropdown_start' readonly name='date' class='date-dropdown__input')
       i(class='date-dropdown_icon') expand_more
-    .date-dropdown_wrapper
+    .date-dropdown__wrapper
       label(for='date-dropdown_end')
         p.date-dropdown__title=name2
       input(id='date-dropdown_end' readonly name='date' class='date-dropdown__input')

@@ -1,11 +1,14 @@
-mixin radio-buttons(classes)
+mixin radio-buttons(classes, id1, id2)
 
   div(class=classes)
     .radio-buttons__wrapper
-      input(type='radio' id='radioMan' name='sex' class='radio-buttons__field')
-      label(for='radioMan' class='radio-buttons__item')
+      input(class='radio-buttons__field' type='radio' id=id1 name='gender')
+      label(for=id1 class='radio-buttons__item')
         |Мужчина
     .radio-buttons__wrapper
-      input(type='radio' id='radioWoman' name='sex' class='radio-buttons__field')
-      label(for='radioWoman' class='radio-buttons__item')
+      input(class='radio-buttons__field' type='radio' id=id2 name='gender' )
+      label(for=id2 class='radio-buttons__item')
         |Женщина
+
+
+  

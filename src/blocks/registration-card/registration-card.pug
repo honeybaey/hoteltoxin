@@ -4,19 +4,19 @@ include ../toggle/toggle
 include ../masked-text-field/masked-text-field
 include ../radio-buttons/radio-buttons
 
-mixin registration(name)
+mixin registration(name, classes)
 
-  .registration
+  div(class=classes)
     .registration__wrapper
       p.registration__title=name
       +text-field('Имя', 'text-field text-field_registration')
       +text-field('Фамилия', 'text-field  text-field_registration')
-      +radio-buttons('radio-buttons_registration')
+      +radio-buttons('radio-buttons_registration', 'manReg', 'womanReg')
       +masked-text-field('Дата рождения', 'masked-text-field masked-text-field_registration')
       p.registration__text Данные для входа в сервис
       +text-field('Email', 'text-field text-field_registration')
       +text-field('Пароль', 'text-field text-field_registration', 'password')
-      +toggle('Получать спецпредложения', 'toggle__wrapper toggle__wrapper_registration')
+      +toggle('Получать спецпредложения', 'toggle__wrapper toggle__wrapper_registration', 'toggleReg')
       +btn('Перейти к оплате', 'btn btn_big btn_registration')
       div.registration__info
         span.registration__account Уже есть аккаунт на Toxin?

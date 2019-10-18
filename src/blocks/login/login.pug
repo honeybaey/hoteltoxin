@@ -3,7 +3,7 @@ include ../text-field/text-field
 
 mixin login(name, classes)
 
-  .login
+  div(class=classes)
     .login__wrapper
       p.login__title=name
       +text-field('Email', 'text-field text-field_login')
