@@ -21,6 +21,8 @@ include ../../blocks/bullet-list/bullet-list
 include ../../blocks/pick-room/pick-room
 include ../../blocks/registration-card/registration-card
 include ../../blocks/login/login
+include ../../blocks/booking/booking
+include ../../blocks/room-card/room-card
 
 
 .ui-kit__form-elements
@@ -51,10 +53,10 @@ include ../../blocks/login/login
       +checkbox-buttons('Checkbox Buttons')
     div
       p(class='radio-buttons__title') Radio Buttons
-      +radio-buttons('radio-buttons')
+      +radio-buttons('radio-buttons', 'manUi', 'womanUi')
     div
       p(class='toggle__title') Toggle
-      +toggle('Получать спецпредложения', 'toggle__wrapper')
+      +toggle('Получать спецпредложения', 'toggle__wrapper', 'toggleUi')
     div
       p(class='like-button__title') Like Button
       +like-button('2')
@@ -84,6 +86,17 @@ include ../../blocks/login/login
       div
         +bullet-list('Bullet List')
 .ui-kit__cards
-  +pick-room('Найдём номера под ваши пожелания', 'pick-room pick-room_cards')
-  +registration('Регистрация аккаунта')
-  +login('Войти')
+  .ui-kit__cards-container
+    +pick-room('Найдём номера под ваши пожелания', 'pick-room card')
+    +registration('Регистрация аккаунта', 'registration card')
+    +login('Войти', 'login card')
+    +booking('booking card', '888', 'Люкс', '9990')
+    //- +room-card('room-card card', 'image1', '888', 'Люкс', '9990')
+    +room-card({
+        classes: 'room-card card',
+        photoName: 'image1',
+        number: 888,
+        type: 'Люкс',
+        price: 9900,
+        photos: ['image1', 'image2'],
+      })

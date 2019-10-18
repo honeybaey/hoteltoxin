@@ -12,3 +12,4 @@ import './blocks/expandable-checkbox-list/expandable-checkbox-list';
 import './blocks/like-button/like-button';
 import './blocks/range-slider/range-slider.js';
 import './blocks/range-slider/nouislider';
+import './blocks/room-card/room-card';
