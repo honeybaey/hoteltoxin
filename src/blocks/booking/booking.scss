@@ -1,0 +1,78 @@
+.booking {
+  &__wrapper {
+    padding: 30px;
+  }
+  &__info {
+    display: flex;
+    align-items: baseline;
+    font-family: 'Quicksand';
+  }
+  &__number {
+    padding-right: 5px;
+    &:before {
+      content: '№ ';
+      font-size: 0.875rem;
+    }
+  }
+  &__type {
+    @include font-label;
+    color: $purple;
+  }
+  &__price {
+    margin-left: auto;
+    @include font-texts;
+  }
+  &__price-value {
+    padding-right: 5px;
+    font-weight: bold;
+    &::after {
+      content: '₽';
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.price-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &__name {
+    max-width: 314px;
+  }
+  &__item {
+    margin-bottom: 10px;
+    @include font-texts;
+    color: $dark-shade-75;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__price {
+    &::after {
+      content: '₽';
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.booking__total {
+  @include fontTitle;
+  font-size: 1.1875rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  &-value {
+    flex-grow: 1;
+    display: flex;
+    &::before {
+      content: "";
+      height: 19px;
+      margin: 0 5px;
+      border-bottom: 1px dashed rgba(31,32,65,.25);
+      flex-grow: 1;
+    }
+    &::after {
+      content: '₽';
+      font-size: 1.1875rem;
+    }
+  }
+}

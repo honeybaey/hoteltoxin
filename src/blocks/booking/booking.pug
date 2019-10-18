@@ -1,0 +1,32 @@
+include ../date-dropdown/date-dropdown
+include ../dropdown-default/dropdown-default
+include ../btn/btn
+
+mixin booking(classes, number, type, price)
+
+  div(class=classes)
+    .booking__wrapper
+      .booking__info
+        h2(class='booking__number')=number
+        span.booking__type=type
+        span.booking__price
+          span.booking__price-value=price
+          | в сутки
+      +date-dropdown('Прибытие', 'Выезд', 'date-dropdown date-dropdown_pick-room')
+      +dropdown-default('Гости', 'dropdown-guest')
+      .booking__price-list
+        ul.price-list
+          li.price-list__item
+            span.price-list__name 9 990₽ х 4 суток
+            span.price-list__price 39 960
+          li.price-list__item
+            span.price-list__name Сбор за услуги: скидка 2 179₽
+            span.price-list__price 0
+          li.price-list__item
+            span.price-list__name Сбор за дополнительные услуги
+            span.price-list__price 300
+      .booking__total
+        span Итого
+        span.booking__total-border
+        span.booking__total-value 38 081
+      +btn('Забронировать', 'btn btn_big')
