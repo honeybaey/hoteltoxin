@@ -1,6 +1,6 @@
-mixin rate-button
+mixin rate-button(classes)
 
-  .rate-button_wrapper
+  div(class=classes)
     form
       span(class='rate-button')
         input(id='rate5' type='radio', name='rating', value='5')
@@ -13,5 +13,3 @@ mixin rate-button
         label(for='rate2') 
         input(id='rate1' type='radio', name='rating', value='1')
         label(for='rate1') 
-        input(id='rate0' type='radio', name='rating', value='0')
-        label(for='rate0')
