@@ -62,7 +62,7 @@ include ../../blocks/room-card/room-card
       +like-button('2')
     div
       p(class='rate-button__title') Rate Button
-      +rate-button
+      +rate-button('rate-button__wrapper')
     div
       +rich-checkbox-buttons('Rich Checkbox Buttons')
     //- div
@@ -93,10 +93,20 @@ include ../../blocks/room-card/room-card
     +booking('booking card', '888', 'Люкс', '9990')
     //- +room-card('room-card card', 'image1', '888', 'Люкс', '9990')
     +room-card({
-        classes: 'room-card card',
-        photoName: 'image1',
-        number: 888,
-        type: 'Люкс',
-        price: 9900,
-        photos: ['image1', 'image2'],
-      })
+      classes: 'room-card',
+      photoName: 'image1',
+      number: 888,
+      type: 'Люкс',
+      price: 9900,
+      photos: ['image1', 'image2'],
+      reviewsCount: '145',
+    })
+    +room-card({
+      classes: 'room-card',
+      photoName: 'image2',
+      number: 840,
+      type: '',
+      price: 9900,
+      photos: ['image2', 'image1'],
+      reviewsCount: '65',
+    })
