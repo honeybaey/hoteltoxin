@@ -1,5 +1,6 @@
 // import 'jquery'; при подключении через ProvidePlugin, import в точке входа необязателен
 import './scss/styles.scss';
+import './utils';
 import './blocks/masked-text-field/masked-text-field';
 import '../node_modules/jquery-mask-plugin/dist/jquery.mask.min';
 import './blocks/date-dropdown/datepicker.min';
