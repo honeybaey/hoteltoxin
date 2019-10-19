@@ -1,11 +1,17 @@
 .booking {
   &__wrapper {
     padding: 30px;
+    /* &_room-card {
+      padding: 0 15px 0px 20px;
+    } */
   }
   &__info {
     display: flex;
     align-items: baseline;
     font-family: 'Quicksand';
+    &_room-card {
+      border-bottom: 1px solid $dark-shade-10;
+    }
   }
   &__number {
     padding-right: 5px;
