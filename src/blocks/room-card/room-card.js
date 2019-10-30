@@ -5,11 +5,3 @@ $('.room-card__carousel').slick({
   infinite: false,
   arrows: false
 });
-
-$('.room-card__link').click((e) => {
-  const clickOnDots = $('.slick-dots', e.currentTarget).find(e.target).length > 0;
-
-  if (clickOnDots) {
-    e.preventDefault();
-  }
-});
