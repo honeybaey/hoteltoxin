@@ -23,6 +23,7 @@
 @import '../../blocks/login/login.scss';
 @import '../../blocks/booking/booking.scss';
 @import '../../blocks/room-card/room-card.scss';
+@import '../../blocks/header/header.scss';
 
 .ui-kit__form-elements {
   display: flex;
@@ -58,4 +59,9 @@
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+.ui-kit__sections {
+  padding-top: 40px;
+  background-color: #e5e5e5;
 }
