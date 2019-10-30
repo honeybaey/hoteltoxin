@@ -3,7 +3,7 @@
   cursor: pointer;
   @include font-label;
   color: #FFFFFF;
-  padding: 14px 18px;
+  padding: 15px 18px;
   border-radius: 22px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   transition-duration: 300ms;
@@ -22,6 +22,7 @@
     border: 2px solid #BC9CFF;
     color: #BC9CFF;
     width: 101px;
+    padding: 13px 18px;
   }
   &_big {
     width: 320px;
@@ -50,5 +51,10 @@
     &::after {
       left: 105px;
     }
+  }
+  &_header {
+    width: 101px;
+    height: 34px;
+    padding-top: 9px;
   }
 }
