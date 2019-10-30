@@ -1,0 +1,52 @@
+.header {
+  height: 70px;
+  background: #fff;
+  &__img {
+    padding-top: 15px;
+  }
+  &__menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__menu-list {
+    margin: 0;
+    padding: 10px 0 0 0;
+    list-style: none;
+    display: flex;
+    @include font-texts;
+    align-items: baseline;
+  }
+  &__menu-item {
+    padding-right: 28px;
+    &:first-child {
+      font-weight: bold;
+    }
+  }
+  &__menu-link {
+    text-decoration: none;
+    color: $dark-shade-50;
+    &:hover {
+      color: $dark-shade-75;
+    }
+  }
+  &__user {
+    display: flex;
+  }
+  &__user div:first-of-type {
+    padding-right: 15px;
+  }
+  &__user_logged {
+    position: relative;
+    padding-left: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -6px;
+      width: 1px;
+      height: 30px;
+      background: rgba(31,32,65,.1);
+    }
+  }
+}
