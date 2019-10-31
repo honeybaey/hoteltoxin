@@ -14,7 +14,12 @@ module.exports = {
 		path: path.resolve(__dirname, './dist'),
 		filename: './js/main.js', 
 		// publicPath: '/dist',
-	},
+  },
+  /* resolve: {
+    alias: {
+      src: path.resolve(__dirname, 'src')
+    }
+  }, */
 	module: {  
 		rules: [   
 			{
@@ -96,7 +101,7 @@ module.exports = {
 		),
 		new CopyWebpackPlugin([
 			{ from: './src/img', to: './img' },
-			{ from: './src/static', to: './static' },
+			{ from: './src/static', to: './img' },
     ]),
 		new webpack.ProvidePlugin(
 			{
