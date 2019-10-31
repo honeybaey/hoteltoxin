@@ -24,6 +24,8 @@ include ../../blocks/login/login
 include ../../blocks/booking/booking
 include ../../blocks/room-card/room-card
 include ../../blocks/header/header
+include ../../blocks/footer/footer
+include ../../blocks/socials/socials
 
 
 .ui-kit__form-elements
@@ -112,27 +114,27 @@ include ../../blocks/header/header
       reviewsCount: '65',
     })
 .ui-kit__sections
-  div
-    +header({
-      isLoggedIn: true,
-      userName: 'Cosmin Negoita',
-      menuItems: [
-          {name: 'Home', href: '#'},
-          {name: 'About Us', href: '#'},
-          {name: 'Services', href: '#'},
-          {name: 'Careers', href: '#'},
-          {name: 'News', href: '#'},
-          {name: 'Documentation', href: '#'}
-      ],
-    })
-    +header({
-      isLoggedIn: false,
-      menuItems: [
-          {name: 'Home', href: '#'},
-          {name: 'About Us', href: '#'},
-          {name: 'Services', href: '#'},
-          {name: 'Careers', href: '#'},
-          {name: 'News', href: '#'},
-          {name: 'Documentation', href: '#'}
-      ],
-    })
+  +header({
+    isLoggedIn: false,
+    menuItems: [
+        {name: 'Home', href: '#'},
+        {name: 'About Us', href: '#'},
+        {name: 'Services', href: '#'},
+        {name: 'Careers', href: '#'},
+        {name: 'News', href: '#'},
+        {name: 'Documentation', href: '#'}
+    ],
+  })
+  +header({
+    isLoggedIn: true,
+    userName: 'Cosmin Negoita',
+    menuItems: [
+        {name: 'Home', href: '#'},
+        {name: 'About Us', href: '#'},
+        {name: 'Services', href: '#'},
+        {name: 'Careers', href: '#'},
+        {name: 'News', href: '#'},
+        {name: 'Documentation', href: '#'}
+    ],
+  })
+  +footer()
