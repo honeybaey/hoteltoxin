@@ -1,0 +1,17 @@
+.socials {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  &__link:hover {
+    opacity: 0.8;
+  }
+  &__icon {
+    @include gradient-color($gradient__primary);
+    font-size: 24px;
+    line-height: 23px;
+  }
+}

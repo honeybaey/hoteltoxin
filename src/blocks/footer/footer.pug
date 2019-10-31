@@ -1,0 +1,54 @@
+include ../subscription-text-field/subscription-text-field
+
+mixin footer()
+
+  footer.footer
+    .footer__container.container
+      .footer__info
+        .footer__logo
+          a(href="" class='logo-link')
+            img(src=require('../static/Logo.svg'), alt='Toxin')
+        .footer-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+
+      nav.footer__menu
+        div
+          h3.footer__menu-title Навигация
+          ul.footer__menu-list
+            li.footer__menu-item
+              a.footer__menu-link(href='#') О нас
+            li.footer__menu-item
+              a.footer__menu-link(href='#') Новости
+            li.footer__menu-item
+              a.footer__menu-link(href='#') Служба поддержки
+            li.footer__menu-item
+              a.footer__menu-link(href='#') Услуги
+        div
+          h3.footer__menu-title О нас
+          ul.footer__menu-list
+            li.footer__menu-item
+              a.footer__menu-link(href='#') О сервисе
+            li.footer__menu-item
+              a.footer__menu-link(href='#') Наша команда
+            li.footer__menu-item
+              a.footer__menu-link(href='#') Вакансии
+            li.footer__menu-item
+              a.footer__menu-link(href='#') Инвесторы
+        div
+          h3.footer__menu-title Служба поддержки
+          ul.footer__menu-list
+            li.footer__menu-item
+              a.footer__menu-link(href='#') Соглашения
+            li.footer__menu-item
+              a.footer__menu-link(href='#') Сообщества
+            li.footer__menu-item
+              a.footer__menu-link(href='#') Связь с нами
+
+      label.footer__newsletter
+        h3.footer__newsletter-title Подписка
+        p.footer__newsletter-text Получайте специальные предложения и новости сервиса
+        +subscription-text-field('Email', '')
+
+    .footer__bottom
+      .footer__bottom-container.container
+        p.footer__copyright Copyright © 2019 Toxin отель. Все права защищены.
+        +socials
