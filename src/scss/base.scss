@@ -5,3 +5,14 @@ body {
 	-moz-box-sizing: border-box;
 	font-size: 14px;
 }
+
+.container {
+  max-width: 1160px;
+  width: calc(100% - 16px);
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+      width: calc(100% - 48px);
+  }
+}
