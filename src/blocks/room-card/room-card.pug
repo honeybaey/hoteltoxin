@@ -3,14 +3,14 @@ include ../rate-button/rate-button
 mixin room-card(params)
 
   - const { classes, photoName, number, type, price, photos, reviewsCount } = params;
-  - const { getNoun } = require('../utils');
+  - const { getNoun } = require('../../utils');
 
   div(class=classes)
     .room-card__carousel
       for photoName in photos
         .room-card__slide
           img(
-              src=require(`../img/${photoName}.png`)
+              src=require(`../../img/${photoName}.png`)
               alt=`Комната №${number}`
             )
     .room-card__info
