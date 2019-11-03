@@ -1,3 +1,5 @@
+extends ../../pug/index
+
 include ../../blocks/text-field/text-field
 include ../../blocks/dropdown-default/dropdown-default
 include ../../blocks/masked-text-field/masked-text-field
@@ -27,114 +29,113 @@ include ../../blocks/header/header
 include ../../blocks/footer/footer
 include ../../blocks/socials/socials
 
-
-.ui-kit__form-elements
-  .ui-kit__col
-    div
-      p.text-field__title Text Field
-      +text-field('Email', 'text-field text-field_ui-kit')
-    div
-      +dropdown-default('Dropdown', 'dropdown-guest dropdown-guest_ui-kit')
-    div
-      +masked-text-field('Masked Text Field', 'masked-text-field masked-text-field_ui-kit')
-    div
-      +date-dropdown('Date Dropdown', 'Date Dropdown', 'date-dropdown date-dropdown_ui-kit')
-    div
-      +filter-date-dropdown('Filter Date Dropdown')
-    div
-      +subscription-text-field('Email', 'Subscription Text Field')
-    div
-      +dropdown-comfort('Dropdown')
-    div
-      +expandable-checkbox-list('Expandable Checkbox List')
-    div
-      +room-info('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
-    div
-      +room-info('Удобство', 'Окно в каждой из спален', 'location_city')
-  .ui-kit__col
-    div
-      +checkbox-buttons('Checkbox Buttons')
-    div
-      p(class='radio-buttons__title') Radio Buttons
-      +radio-buttons('radio-buttons', 'manUi', 'womanUi')
-    div
-      p(class='toggle__title') Toggle
-      +toggle('Получать спецпредложения', 'toggle__wrapper', 'toggleUi')
-    div
-      p(class='like-button__title') Like Button
-      +like-button('2')
-    div
-      p(class='rate-button__title') Rate Button
-      +rate-button('rate-button__wrapper')
-    div
-      +rich-checkbox-buttons('Rich Checkbox Buttons')
-    //- div
-    //-   +feedback({
-    //-               name: 'Мурад Сарафанов',
-    //-               date: '2019-10-01',
-    //-               text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-    //-               image: 'user1',
-    //-             })
-  .ui-kit__col
-    div
-      +range-slider('Range Slider')
-    div
-      p(class='btn__title') Buttons
-      +btn('Click me', 'btn btn_ui-kit')
-      +btn('Click me', 'btn btn_border btn_ui-kit')
-      +btn('Перейти к оплате', 'btn btn_big')
+block content
+  .ui-kit__form-elements
+    .ui-kit__col
       div
-        p(class='pagination__title') Pagination
-        +pager('1 – 12 из 100+ вариантов аренды', '15')
+        p.text-field__title Text Field
+        +text-field('Email', 'text-field text-field_ui-kit')
       div
-        +bullet-list('Bullet List')
-.ui-kit__cards
-  .ui-kit__cards-container
-    +pick-room('Найдём номера под ваши пожелания', 'pick-room card')
-    +registration('Регистрация аккаунта', 'registration card')
-    +login('Войти', 'login card')
-    +booking('booking card', '888', 'Люкс', '9990')
-    //- +room-card('room-card card', 'image1', '888', 'Люкс', '9990')
-    +room-card({
-      classes: 'room-card',
-      photoName: 'image1',
-      number: 888,
-      type: 'Люкс',
-      price: 9900,
-      photos: ['image1', 'image2'],
-      reviewsCount: '145',
+        +dropdown-default('Dropdown', 'dropdown-guest_wrapper dropdown-guest_ui-kit')
+      div
+        +masked-text-field('Masked Text Field', 'masked-text-field masked-text-field_ui-kit')
+      div
+        +date-dropdown('Date Dropdown', 'Date Dropdown', 'date-dropdown date-dropdown_ui-kit')
+      div
+        +filter-date-dropdown('Filter Date Dropdown')
+      div
+        +subscription-text-field('Email', 'Subscription Text Field')
+      div
+        +dropdown-comfort('Dropdown')
+      div
+        +expandable-checkbox-list('Expandable Checkbox List')
+      div
+        +room-info('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
+      div
+        +room-info('Удобство', 'Окно в каждой из спален', 'location_city')
+    .ui-kit__col
+      div
+        +checkbox-buttons('Checkbox Buttons')
+      div
+        p(class='radio-buttons__title') Radio Buttons
+        +radio-buttons('radio-buttons', 'manUi', 'womanUi')
+      div
+        p(class='toggle__title') Toggle
+        +toggle('Получать спецпредложения', 'toggle__wrapper', 'toggleUi')
+      div
+        p(class='like-button__title') Like Button
+        +like-button('2')
+      div
+        p(class='rate-button__title') Rate Button
+        +rate-button('rate-button__wrapper')
+      div
+        +rich-checkbox-buttons('Rich Checkbox Buttons')
+      //- div
+      //-   +feedback({
+      //-               name: 'Мурад Сарафанов',
+      //-               date: '2019-10-01',
+      //-               text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+      //-               image: 'user1',
+      //-             })
+    .ui-kit__col
+      div
+        +range-slider('Range Slider')
+      div
+        p(class='btn__title') Buttons
+        +btn('Click me', 'btn btn_ui-kit')
+        +btn('Click me', 'btn btn_border btn_ui-kit')
+        +btn('Перейти к оплате', 'btn btn_big')
+        div
+          p(class='pagination__title') Pagination
+          +pager('1 – 12 из 100+ вариантов аренды', '15')
+        div
+          +bullet-list('Bullet List')
+  .ui-kit__cards
+    .ui-kit__cards-container
+      +pick-room('Найдём номера под ваши пожелания', 'pick-room card')
+      +registration('Регистрация аккаунта', 'registration card')
+      +login('Войти', 'login card')
+      +booking('booking card', '888', 'Люкс', '9990')
+      +room-card({
+        classes: 'room-card',
+        photoName: 'image1',
+        number: 888,
+        type: 'Люкс',
+        price: 9900,
+        photos: ['image1', 'image2'],
+        reviewsCount: '145',
+      })
+      +room-card({
+        classes: 'room-card',
+        photoName: 'image2',
+        number: 840,
+        type: '',
+        price: 9900,
+        photos: ['image2', 'image1'],
+        reviewsCount: '65',
+      })
+  .ui-kit__sections
+    +header({
+      isLoggedIn: false,
+      menuItems: [
+          {name: 'Home', href: '#'},
+          {name: 'About Us', href: '#'},
+          {name: 'Services', href: '#'},
+          {name: 'Careers', href: '#'},
+          {name: 'News', href: '#'},
+          {name: 'Documentation', href: '#'}
+      ],
     })
-    +room-card({
-      classes: 'room-card',
-      photoName: 'image2',
-      number: 840,
-      type: '',
-      price: 9900,
-      photos: ['image2', 'image1'],
-      reviewsCount: '65',
+    +header({
+      isLoggedIn: true,
+      userName: 'Cosmin Negoita',
+      menuItems: [
+          {name: 'Home', href: '#'},
+          {name: 'About Us', href: '#'},
+          {name: 'Services', href: '#'},
+          {name: 'Careers', href: '#'},
+          {name: 'News', href: '#'},
+          {name: 'Documentation', href: '#'}
+      ],
     })
-.ui-kit__sections
-  +header({
-    isLoggedIn: false,
-    menuItems: [
-        {name: 'Home', href: '#'},
-        {name: 'About Us', href: '#'},
-        {name: 'Services', href: '#'},
-        {name: 'Careers', href: '#'},
-        {name: 'News', href: '#'},
-        {name: 'Documentation', href: '#'}
-    ],
-  })
-  +header({
-    isLoggedIn: true,
-    userName: 'Cosmin Negoita',
-    menuItems: [
-        {name: 'Home', href: '#'},
-        {name: 'About Us', href: '#'},
-        {name: 'Services', href: '#'},
-        {name: 'Careers', href: '#'},
-        {name: 'News', href: '#'},
-        {name: 'Documentation', href: '#'}
-    ],
-  })
-  +footer()
+    +footer()
