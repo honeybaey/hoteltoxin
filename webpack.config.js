@@ -20,6 +20,9 @@ module.exports = {
       src: path.resolve(__dirname, 'src')
     }
   }, */
+  devServer: {
+    openPage: ['ui-kit.html', 'landing-page.html']
+  },
 	module: {  
 		rules: [   
 			{
@@ -95,10 +98,22 @@ module.exports = {
 		),
 		new HtmlWebpackPlugin(
 			{
-			filename: 'index.html',
+      filename: 'index.html',
 			template: './src/pug/index.pug',
 		}
+    ),
+    new HtmlWebpackPlugin(
+			{
+      filename: 'ui-kit.html',
+			template: './src/pages/ui-kit/ui-kit.pug',
+		}
 		),
+    new HtmlWebpackPlugin(
+			{
+      filename: 'landing-page.html',
+			template: './src/pages/landing-page/landing-page.pug',
+		}
+    ),
 		new CopyWebpackPlugin([
 			{ from: './src/img', to: './img' },
 			{ from: './src/static', to: './img' },
