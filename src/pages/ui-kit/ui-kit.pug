@@ -1,7 +1,7 @@
 extends ../../pug/index
 
 include ../../blocks/text-field/text-field
-include ../../blocks/dropdown-default/dropdown-default
+include ../../blocks/dropdown-guests/dropdown-guests
 include ../../blocks/masked-text-field/masked-text-field
 include ../../blocks/date-dropdown/date-dropdown
 include ../../blocks/filter-date-dropdown/filter-date-dropdown
@@ -29,6 +29,9 @@ include ../../blocks/header/header
 include ../../blocks/footer/footer
 include ../../blocks/socials/socials
 
+block variables
+  - const title = 'UI kit';
+
 block content
   .ui-kit__form-elements
     .ui-kit__col
@@ -36,7 +39,7 @@ block content
         p.text-field__title Text Field
         +text-field('Email', 'text-field text-field_ui-kit')
       div
-        +dropdown-default('Dropdown', 'dropdown-guest_wrapper dropdown-guest_ui-kit')
+        +dropdown-guests()
       div
         +masked-text-field('Masked Text Field', 'masked-text-field masked-text-field_ui-kit')
       div
@@ -46,7 +49,7 @@ block content
       div
         +subscription-text-field('Email', 'Subscription Text Field')
       div
-        +dropdown-comfort('Dropdown')
+        +dropdown-comfort()
       div
         +expandable-checkbox-list('Expandable Checkbox List')
       div
@@ -82,9 +85,18 @@ block content
         +range-slider('Range Slider')
       div
         p(class='btn__title') Buttons
-        +btn('Click me', 'btn btn_ui-kit')
-        +btn('Click me', 'btn btn_border btn_ui-kit')
-        +btn('Перейти к оплате', 'btn btn_big')
+        +btn({
+            className: 'btn btn_ui-kit',
+            label: 'Click me',
+          })
+        +btn({
+            className: 'btn btn_border btn_ui-kit',
+            label: 'Click me',
+          })
+        +btn({
+            className: 'btn btn_big',
+            label: 'Перейти к оплате',
+          })
         div
           p(class='pagination__title') Pagination
           +pager('1 – 12 из 100+ вариантов аренды', '15')
@@ -138,4 +150,4 @@ block content
           {name: 'Documentation', href: '#'}
       ],
     })
-    +footer()
+    +footer
