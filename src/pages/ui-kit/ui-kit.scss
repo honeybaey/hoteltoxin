@@ -1,10 +1,9 @@
 @import '../../blocks/text-field/text-field.scss';
-@import '../../blocks/dropdown-default/dropdown-default.scss';
 @import '../../blocks/masked-text-field/masked-text-field.scss';
 @import '../../blocks/date-dropdown/date-dropdown.scss';
 @import '../../blocks/filter-date-dropdown/filter-date-dropdown.scss';
 @import '../../blocks/subscription-text-field/subscription-text-field.scss';
-@import '../../blocks/dropdown-comfort/dropdown-comfort.scss';
+@import '../../blocks/dropdown/dropdown.scss';
 @import '../../blocks/expandable-checkbox-list/expandable-checkbox-list.scss';
 @import '../../blocks/room-info/room-info.scss';
 @import '../../blocks/checkbox-buttons/checkbox-buttons.scss';
@@ -47,11 +46,14 @@
 }
 
 .ui-kit__cards-container {
-  padding-top: 60px;
   display: grid;
-  justify-content: center;
   grid-gap: 40px;
   grid-template-columns: repeat(3, 400px);
+  padding-top: 60px;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
 .card {
