@@ -5,11 +5,13 @@
   color: #FFFFFF;
   padding: 15px 18px;
   border-radius: 22px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border: none;
+  background: $gradient__primary;
   transition-duration: 300ms;
   box-sizing: border-box;
   height: 44px;
   text-align: center;
+  outline: none;
   &:hover {
     opacity: 0.5;
   }
@@ -19,8 +21,8 @@
   }
   &_border {
     background: #fff;
-    border: 2px solid #BC9CFF;
-    color: #BC9CFF;
+    border: 2px solid $purple;
+    color: $purple;
     width: 101px;
     padding: 13px 18px;
   }
@@ -40,6 +42,18 @@
       font-weight: 300;
     }
   }
+  &_light {
+    background: none;
+    color: $purple;
+    font: $font-label;
+    text-transform: uppercase;
+  }
+  &_light-grey {
+    background: none;
+    color: $dark-shade-50;
+    font: $font-label;
+    text-transform: uppercase;
+  }
   &_ui-kit {
     margin-bottom: 10px;
   }
@@ -53,7 +67,7 @@
     }
   }
   &_header {
-    width: 101px;
+    // width: 101px;
     height: 34px;
     padding-top: 9px;
   }
