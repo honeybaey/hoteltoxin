@@ -17,7 +17,13 @@ mixin registration(name, classes)
       +text-field('Email', 'text-field text-field_registration')
       +text-field('Пароль', 'text-field text-field_registration', 'password')
       +toggle('Получать спецпредложения', 'toggle__wrapper toggle__wrapper_registration', 'toggleReg')
-      +btn('Перейти к оплате', 'btn btn_big btn_registration')
+      +btn({
+            className: 'btn btn_big btn_registration',
+            label: 'Перейти к оплате',
+          })
       div.registration__info
         span.registration__account Уже есть аккаунт на Toxin?
-        +btn('Войти', 'btn btn_border')
+        +btn({
+            className: 'btn btn_border',
+            label: 'Войти',
+          })

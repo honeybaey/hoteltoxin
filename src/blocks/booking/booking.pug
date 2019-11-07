@@ -1,5 +1,5 @@
 include ../date-dropdown/date-dropdown
-include ../dropdown-default/dropdown-default
+include ../dropdown-guests/dropdown-guests
 include ../btn/btn
 
 mixin booking(classes, number, type, price)
@@ -13,7 +13,7 @@ mixin booking(classes, number, type, price)
           span.booking__price-value=price
           | в сутки
       +date-dropdown('Прибытие', 'Выезд', 'date-dropdown date-dropdown_pick-room')
-      +dropdown-default('Гости', 'dropdown-guest')
+      +dropdown-guests('iqdropdown_booking')
       .booking__price-list
         ul.price-list
           li.price-list__item
@@ -29,4 +29,7 @@ mixin booking(classes, number, type, price)
         span Итого
         span.booking__total-border
         span.booking__total-value 38 081
-      +btn('Забронировать', 'btn btn_big')
+      +btn({
+            className: 'btn btn_big',
+            label: 'Забронировать',
+          })

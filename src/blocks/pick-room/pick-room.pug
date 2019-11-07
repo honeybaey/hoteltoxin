@@ -1,5 +1,5 @@
 include ../date-dropdown/date-dropdown
-include ../dropdown-default/dropdown-default
+include ../dropdown-guests/dropdown-guests
 include ../btn/btn
 
 mixin pick-room(name, classes)
@@ -8,5 +8,8 @@ mixin pick-room(name, classes)
     .pick-room__wrapper
       p.pick-room__title=name
       +date-dropdown('Прибытие', 'Выезд', 'date-dropdown date-dropdown_pick-room')
-      +dropdown-default('Гости', 'dropdown-guest')
-      +btn('Подобрать номер', 'btn btn_big')
+      +dropdown-guests('iqdropdown_pick-room')
+      +btn({
+            className: 'btn btn_big',
+            label: 'Подобрать номер',
+          })

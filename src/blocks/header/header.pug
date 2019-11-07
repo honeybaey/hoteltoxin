@@ -29,5 +29,11 @@ mixin header(params)
                 span.header__username=userName
         else
             .header__user
-                +btn('Login', 'btn btn_border btn_header')
-                +btn('Register', 'btn btn_header')
+              +btn({
+                  className: 'btn btn_border btn_header',
+                  label: 'Войти',
+                })
+              +btn({
+                  className: 'btn btn_header',
+                  label: 'Зарегистрироваться',
+                })

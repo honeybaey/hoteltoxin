@@ -8,7 +8,13 @@ mixin login(name, classes)
       p.login__title=name
       +text-field('Email', 'text-field text-field_login')
       +text-field('Пароль', 'text-field text-field_login', 'password')
-      +btn('Войти', 'btn btn_big btn_login')
+      +btn({
+            className: 'btn btn_big btn_login',
+            label: 'Войти',
+          })
       div.registration__info
         span.registration__account Нет аккаунта на Toxin?
-        +btn('Создать', 'btn btn_border')
+        +btn({
+            className: 'btn btn_border',
+            label: 'Создать',
+          })

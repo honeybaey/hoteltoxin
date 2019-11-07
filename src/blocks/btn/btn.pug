@@ -1,4 +1,7 @@
-mixin btn(text, className)
+mixin btn(params)
+
+  - const { label, className} = params;
 
   .btn__wrapper
-    a(class=className)=text
+    button(class=className)
+      span.btn__label=label
