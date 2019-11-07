@@ -1,0 +1,45 @@
+include ../../blocks/btn/btn
+
+mixin dropdown(params)
+  -
+    const {
+        dropClasses,
+        label,
+        items,
+        initialSelection = '',
+        controls = false
+    } = params;
+
+  .dropdown(data-initial-selection=initialSelection)
+    if label
+      p.dropdown__title= label
+
+    div(class=`iqdropdown ${dropClasses}`)
+      .dropdown__selection-wrapper
+        input.dropdown__selection(readonly)
+        i.dropdown__more-icon expand_more
+
+      .dropdown__menu.iqdropdown-menu
+        for item in items
+          - const { label, name, nouns } = item;
+          .dropdown__option.iqdropdown-menu-option(data-id = name)
+            input.dropdown__input(
+                type = "number"
+                name = name
+                data-nouns = nouns
+            )
+            div
+              p.dropdown__item.iqdropdown-item= label
+
+        if controls
+          .dropdown__controls
+            .dropdown__reset-btn.hidden
+              +btn({
+                  className: 'btn_light-grey',
+                  label: 'Очистить',
+              })
+            .dropdown__apply-btn
+              +btn({
+                  className: 'btn_light',
+                  label: 'Применить',
+              })

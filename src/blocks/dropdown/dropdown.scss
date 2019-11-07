@@ -1,0 +1,165 @@
+.dropdown > *,
+.dropdown > *::before,
+.dropdown > *::after {
+  box-sizing: border-box;
+}
+
+.dropdown__title {
+  @include font-label;
+}
+
+.dropdown__selection {
+  font-family: 'Montserrat';
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: $dark-shade-75;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown__more-icon {
+  font-family: 'Material Icons';
+  font-size: 24px;
+  font-style: normal;
+  position: absolute;
+  right: 8px;
+  transform: translateY(2px);
+  color: $dark-shade-50;
+}
+
+.dropdown__controls {
+  display: flex;
+  margin-top: -15px; // last option item margin-bottom
+  padding-top: 20px; // controls should receive click
+}
+
+.dropdown__apply-btn {
+  margin-left: auto;
+}
+
+.dropdown {
+    // Important for overriding specificity of rules in item-quantity-dropdown
+  .iqdropdown {
+      height: 44px;
+      width: 320px;
+      padding: 10px 15px;
+      border: 1px solid $dark-shade-25;
+      transition: border-color .2s;
+      // margin-bottom: 30px;
+
+      &_pick-room {
+        margin-bottom: 30px;
+      }
+      &_booking {
+        margin-bottom: 20px;
+      }
+
+      &.menu-open {
+          -webkit-border-radius: 2px 2px 0 0 ;
+          -moz-border-radius: 2px 2px 0 0 ;
+          -ms-border-radius: 2px 2px 0 0 ;
+          -o-border-radius: 2px 2px 0 0 ;
+          border-radius: 2px 2px 0 0 ;
+          border-color: $dark-shade-50;
+}
+  }
+
+  .dropdown__menu {
+      top: calc(100% + 2px);
+      padding: 7px 14px 14px;
+      border: 1px solid $dark-shade-50;
+      -webkit-border-radius: 0 0 2px 2px;
+      -moz-border-radius: 0 0 2px 2px;
+      -ms-border-radius: 0 0 2px 2px;
+      -o-border-radius: 0 0 2px 2px;
+      border-radius: 0 0 2px 2px;
+      box-shadow: none;
+}
+
+  .dropdown__input {
+    display: none;
+  }
+
+  .dropdown__option {
+      height: auto;
+      padding: 0 0 7px;
+  }
+
+  .dropdown__item {
+      font-family: 'Montserrat';
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $dark-shade-100;
+  }
+
+  .iqdropdown-item-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: auto;
+  }
+
+  .iqdropdown-item-controls button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border: 1px solid $dark-shade-25;
+      -webkit-border-radius: 50% !important;
+      -moz-border-radius: 50% !important;
+      -ms-border-radius: 50% !important;
+      -o-border-radius: 50% !important;
+      border-radius: 50% !important;
+      font-size: 18px;
+      line-height: 1;
+      text-align: center;
+      color: $dark-shade-50;
+
+      i {
+          min-width: auto;
+          width: auto;
+          height: auto;
+          margin: 0;
+
+          &::before, // Reset lib
+          &::after {
+              position: static !important;
+              transform: none !important;
+              width: auto;
+              height: auto !important;
+              font-style: normal;
+              text-align: center;
+              background: none !important;
+}
+      }
+  }
+
+  .icon-decrement::before {
+      content: '-';
+  }
+
+  .icon-increment::before {
+      content: '+' !important;
+  }
+
+  .counter {
+      display: inline-block;
+      width: 30px;
+      padding: 0 !important;
+      font-family: 'Montserrat' !important;
+      font-weight: bold !important;
+      font-size: 0.75rem !important;
+      line-height: 1;
+      text-align: center;
+      color: $dark-shade-100;
+      border: none !important;
+  }
+}

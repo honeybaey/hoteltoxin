@@ -1,0 +1,22 @@
+include ../../blocks/dropdown/dropdown
+
+mixin dropdown-guests(dropClasses)
+    +dropdown({
+      dropClasses: dropClasses,
+      label: 'Гости',
+      initialSelection: 'Сколько гостей?',
+      controls: true,
+      items: [{
+        name: 'adults',
+        label: 'Взрослые',
+        nouns: ['гость', 'гостя', 'гостей'],
+      }, {
+        name: 'children',
+        label: 'Дети',
+        nouns: ['гость', 'гостя', 'гостей'],
+      }, {
+        name: 'babies',
+        label: 'Младенцы',
+        nouns: ['младенец', 'младенца', 'младенцев'],
+      }],
+    })
