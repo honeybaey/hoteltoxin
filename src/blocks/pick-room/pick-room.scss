@@ -1,4 +1,9 @@
 .pick-room {
+  
+  @media (max-width: $screen-sm-max) {
+    margin: 0 auto;
+  }
+
   &__wrapper {
     padding: 30px;
   }
