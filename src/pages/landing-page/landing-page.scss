@@ -1,0 +1,23 @@
+.landing-page {
+  &__bg {
+    background-image: url('../pages/landing-page/background-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__container {
+    position: relative; // for position title
+    padding: 70px 0 386px 0;
+  }
+  &__title {
+    position: absolute;
+    right: 0;
+    bottom: 18px;
+    margin: 0;
+    @include font-texts;
+    color: $dark-shade-75;
+    text-align: right;
+    width: 297px;
+    line-height: 1.5rem;
+  }
+}

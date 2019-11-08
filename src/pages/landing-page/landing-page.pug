@@ -1,0 +1,25 @@
+extends ../../pug/index
+
+include ../../blocks/header/header
+include ../../blocks/footer/footer
+include ../../blocks/pick-room/pick-room
+
+block variables
+  - const title = 'Landing Page';
+
+block content
+  +header({
+      isLoggedIn: false,
+      menuItems: [
+          {name: 'О нас', href: '#'},
+          {name: 'Услуги', href: '#'},
+          {name: 'Вакансии', href: '#'},
+          {name: 'Новости', href: '#'},
+          {name: 'Соглашения', href: '#'}
+      ],
+    })
+  main.landing-page__bg
+    .landing-page__container.container
+      h1.landing-page__title Лучшие номера для вашей работы, отдыха и просто вдохновения
+      +pick-room('Найдём номера под ваши пожелания', 'pick-room card')
+  +footer()
