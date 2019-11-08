@@ -5,35 +5,36 @@ mixin header(params)
   - const { isLoggedIn, menuItems, userName } = params;
 
   header.header
-    .header__menu
+    .header__nav.container
       .header__logo
         +logo
-      ul.header__menu-list
-        each menuItem in menuItems
-          - const { name, href, submenu } = menuItem;
+      .header__menu
+        ul.header__menu-list
+          each menuItem in menuItems
+            - const { name, href, submenu } = menuItem;
 
-          li.header__menu-item
-            a.header__menu-link(href=href)=name
+            li.header__menu-item
+              a.header__menu-link(href=href)=name
 
-              if submenu
-                ul.header__submenu
+                if submenu
+                  ul.header__submenu
 
-                  each submenuItem in submenu
-                    - const { name, href } = submenu;
+                    each submenuItem in submenu
+                      - const { name, href } = submenu;
 
-                    li.header__submenu-item
-                      a.header__submenu-link(href=href)=name
+                      li.header__submenu-item
+                        a.header__submenu-link(href=href)=name
 
-        if isLoggedIn
-            .header__user.header__user_logged
-                span.header__username=userName
-        else
-            .header__user
-              +btn({
-                  className: 'btn btn_border btn_header',
-                  label: 'Войти',
-                })
-              +btn({
-                  className: 'btn btn_header',
-                  label: 'Зарегистрироваться',
-                })
+      if isLoggedIn
+        .header__user.header__user_logged
+          span.header__username=userName
+      else
+        .header__user
+          +btn({
+              className: 'btn btn_border btn_header',
+              label: 'Войти',
+            })
+          +btn({
+              className: 'btn btn_header',
+              label: 'Зарегистрироваться',
+            })
