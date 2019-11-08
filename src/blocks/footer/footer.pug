@@ -1,4 +1,6 @@
+include ../logo/logo
 include ../subscription-text-field/subscription-text-field
+include ../socials/socials
 
 mixin footer
 
@@ -6,8 +8,7 @@ mixin footer
     .footer__container.container
       .footer__info
         .footer__logo
-          a(href="" class='logo-link')
-            img(src=require('../../static/Logo.svg'), alt='Toxin')
+          +logo
         .footer-description Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 
       nav.footer__menu

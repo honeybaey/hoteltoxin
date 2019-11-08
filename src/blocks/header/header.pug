@@ -1,3 +1,4 @@
+include ../logo/logo
 include ../btn/btn
 
 mixin header(params)
@@ -5,9 +6,8 @@ mixin header(params)
 
   header.header
     .header__menu
-      .header__img
-        a(href="" class='logo-link')
-          img(src=require('../../static/Logo.svg'), alt='Toxin')
+      .header__logo
+        +logo
       ul.header__menu-list
         each menuItem in menuItems
           - const { name, href, submenu } = menuItem;
