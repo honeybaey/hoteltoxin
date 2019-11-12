@@ -1,0 +1,7 @@
+mixin subscription-field(text, name)
+
+  .subscription-field__wrapper
+    label(for='subscribe' class='subscription-field__title') 
+      p=name
+    input(id='subscribe' type="email" name='some-info' class='subscription-field__input' placeholder= text)
+    i.subscription-field__icon arrow_forward
