@@ -57,7 +57,7 @@
     justify-content: center;
 
     @media (min-width: $screen-md) {
-      justify-content: start;
+      justify-content: space-evenly;
     }
 
     @media (min-width: $screen-xl) {
