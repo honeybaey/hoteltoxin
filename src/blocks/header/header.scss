@@ -1,40 +1,94 @@
 .header {
-  height: 70px;
   background: #fff;
-  &__img {
-    padding-top: 15px;
+  &__logo {
+    grid-area: logo;
+    margin-right: auto;
+  }
+  &__nav {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+        'logo menu'
+        'user menu';
+    min-height: 70px;
+    padding: 14px 0;
+
+    @media (min-width: $screen-md) {
+      align-items: center;
+    }
+
+    @media (max-width: $screen-xl) {
+      grid-template-areas:
+          'logo user'
+          'menu menu';
+    }
+
+    @media (min-width: $screen-xl) {
+      grid-template-areas: 'logo menu user';
+      grid-template-columns: auto 1fr auto;
+      grid-gap: 30px;
+    }
   }
   &__menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    grid-area: menu;
+    justify-self: end;
+
+    @media (max-width: $screen-xl) {
+      justify-self: center;
+    }
+
+    @media (max-width: 376px) {
+      justify-self: start;
+    }
   }
   &__menu-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 2px;
     margin: 0;
-    padding: 10px 0 0 0;
+    padding: 0;
     list-style: none;
-    display: flex;
     @include font-texts;
-    align-items: baseline;
+
+    @media (min-width: $screen-md) {
+      grid-auto-flow: column;
+      grid-gap: 22px;
+    }
+
+    @media (min-width: $screen-xl) {
+      grid-gap: 22px;
+    }
   }
   &__menu-item {
-    padding-right: 28px;
-    /* &:first-child {
-      font-weight: bold;
-    } */
+    text-align: left;
+
+    @media (min-width: $screen-md) {
+      text-align: left;
+    }
   }
   &__menu-link {
     text-decoration: none;
     color: $dark-shade-50;
+    padding: 4px;
     &:hover {
       color: $dark-shade-75;
     }
   }
   &__user {
-    display: flex;
-  }
-  &__user div:first-of-type {
-    padding-right: 15px;
+    display: grid;
+    grid-area: user;
+    grid-gap: 10px;
+    justify-content: end;
+    align-items: center;
+    grid-auto-flow: column;
+
+    @media (max-width: 414px) {
+      grid-gap: 2px;
+    }
+
+    @media (min-width: $screen-xl) {
+      grid-gap: 20px;
+    }
   }
   &__user_logged {
     position: relative;
