@@ -1,5 +1,5 @@
 include ../logo/logo
-include ../subscription-text-field/subscription-text-field
+include ../subscription-field/subscription-field
 include ../socials/socials
 
 mixin footer
@@ -47,7 +47,7 @@ mixin footer
       label.footer__newsletter
         h3.footer__newsletter-title Подписка
         p.footer__newsletter-text Получайте специальные предложения и новости сервиса
-        +subscription-text-field('Email', '')
+        +subscription-field('Email', '')
 
     .footer__bottom
       .footer__bottom-container.container
