@@ -6,7 +6,7 @@
   }
   &__nav {
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 6px;
     grid-template-areas:
         'logo menu'
         'user menu';
@@ -36,15 +36,11 @@
     @media (max-width: $screen-xl) {
       justify-self: center;
     }
-
-    @media (max-width: 376px) {
-      justify-self: start;
-    }
   }
   &__menu-list {
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 2px;
+    grid-gap: 7px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -70,6 +66,11 @@
     text-decoration: none;
     color: $dark-shade-50;
     padding: 4px;
+
+    @media (max-width: 375px) {
+      padding: 0;
+    }
+
     &:hover {
       color: $dark-shade-75;
     }
@@ -81,10 +82,6 @@
     justify-content: end;
     align-items: center;
     grid-auto-flow: column;
-
-    @media (max-width: 414px) {
-      grid-gap: 2px;
-    }
 
     @media (min-width: $screen-xl) {
       grid-gap: 20px;
