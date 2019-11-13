@@ -67,7 +67,7 @@
           border: 1px solid white;
           box-shadow: 0 5px 5px 0 $dark-shade-25;
           border-radius: 50%;
-          &:hover, &:focus {
+          &:hover, &:focus, &:active {
             background: white;
           }
       }
