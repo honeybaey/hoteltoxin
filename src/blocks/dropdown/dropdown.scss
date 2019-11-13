@@ -6,6 +6,7 @@
 
 .dropdown__title {
   @include font-label;
+  margin: 0 0 5px 0;
 }
 
 .dropdown__selection {
