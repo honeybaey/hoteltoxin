@@ -1,42 +1,38 @@
-.filter-date-dropdown_wrapper {
-  // padding-left: 20px;
-  max-width: 266px;
-}
-
-.filter-date-dropdown__label {
-	@include font-label;
-}
-
-.filter-date-dropdown__input {
-	outline: none;
-	font: $font-text;
-	color: $dark-shade-75;
-	padding-left: 15px;
-	height: 40px;
-	width: 266px;
-  box-sizing: border-box;
-	border: 1px solid $dark-shade-25;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  cursor: pointer;
-
-	&::placeholder {
-		color: $dark-shade-75;
-	}
-}
-
-.filter-date-dropdown_icon::after {
-  font-family: 'Material Icons';
-  content: '\e5cf';
-  position: relative;
-  left: 230px;
-  bottom: 32px;
-  font-size: 24px;
-  color: rgba(31, 32, 65, 0.5);
-  font-weight: 100;
-  cursor: pointer;
-  pointer-events: none;
+.filter-date-dropdown {
+    max-width: 266px;
+    position: relative;
+  &__label {
+    @include font-label;
+  }
+  &__input {
+    outline: none;
+    font: $font-text;
+    color: $dark-shade-75;
+    padding-left: 15px;
+    height: 40px;
+    width: 266px;
+    box-sizing: border-box;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    cursor: pointer;
+  
+    &::placeholder {
+      color: $dark-shade-75;
+    }
+  }
+  &__icon {
+    font-family: 'Material Icons';
+    cursor: pointer;
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 24px;
+    font-style: normal;
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    pointer-events: none;
+  }
 }
