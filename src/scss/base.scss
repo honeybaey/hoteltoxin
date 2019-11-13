@@ -26,10 +26,6 @@ body {
   border-radius: 4px;
   padding: 40px 30px 30px;
 
-  @media (max-width: $screen-sm) {
-    padding: 20px 15px 20px 15px;
-  }
-
   @media (min-width: $screen-md) {
     width: 380px;
   }
