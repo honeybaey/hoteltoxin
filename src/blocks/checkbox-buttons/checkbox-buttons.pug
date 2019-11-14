@@ -1,7 +1,7 @@
 mixin checkbox-buttons(name)
 
   .checkbox-buttons
-    p(class='checkbox-buttons__title_style')=name
+    p.checkbox-buttons__title=name
     +checkbox-item('Можно курить', 'checkbox-smoke')
     +checkbox-item('Можно с питомцами', 'checkbox-pets')
     +checkbox-item('Можно пригласить гостей (до 10 человек)', 'checkbox-guests')
