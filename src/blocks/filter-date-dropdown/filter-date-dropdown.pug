@@ -1,7 +1,7 @@
 mixin filter-date-dropdown(name)
 
   .filter-date-dropdown
-    label(for='filter-date-dropdown' class='filter-date-dropdown__label')
+    label.filter-date-dropdown__label
       p=name
-    input(id='filter-date-dropdown' readonly data-range='true' data-multiple-dates-separator=' - ' class='filter-date-dropdown__input' placeholder= 'ДД.ММ.ГГГГ')
-    i.filter-date-dropdown__icon expand_more
+      input(id='filter-date-dropdown' readonly data-range='true' data-multiple-dates-separator=' - ' class='filter-date-dropdown__input' placeholder= 'ДД.ММ.ГГГГ')
+      i.filter-date-dropdown__icon.material-icons expand_more
