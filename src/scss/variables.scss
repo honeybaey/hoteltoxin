@@ -15,6 +15,7 @@ $font-text: normal 0.875rem Montserrat;
 $font-family: Quicksand;
 
 $gradient__primary: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$gradient__secondary: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 @mixin font-label {
   font: $font-label;
