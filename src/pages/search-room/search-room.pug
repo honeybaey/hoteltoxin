@@ -1,0 +1,153 @@
+extends ../../pug/index
+
+include ../../blocks/header/header
+include ../../blocks/footer/footer
+include ../../blocks/dropdown-guests/dropdown-guests
+include ../../blocks/filter-date-dropdown/filter-date-dropdown
+include ../../blocks/range-slider/range-slider
+include ../../blocks/checkbox-buttons/checkbox-buttons
+include ../../blocks/rich-checkbox-buttons/rich-checkbox-buttons
+include ../../blocks/dropdown-comfort/dropdown-comfort
+include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
+include ../../blocks/pagination/pagination
+include ../../blocks/room-card/room-card
+
+block variables
+  - const title = 'Search Room';
+
+block content
+  +header({
+      isLoggedIn: false,
+      menuItems: [
+          {name: 'О нас', href: '#'},
+          {name: 'Услуги', href: '#'},
+          {name: 'Вакансии', href: '#'},
+          {name: 'Новости', href: '#'},
+          {name: 'Соглашения', href: '#'}
+      ],
+    })
+  main
+    .search-room__container.container
+      aside.search-room__sidebar
+        form.search-room__filter
+          +filter-date-dropdown('Даты пребывания в отеле')
+          +dropdown-guests('iqdropdown_search-room')
+          +range-slider('Диапазон цены')
+          +checkbox-buttons('Checkbox Buttons')
+          +rich-checkbox-buttons('Доступность')
+          +dropdown-comfort('iqdropdown_search-room')
+          +expandable-checkbox-list('Дополнительные удобства')
+      main.search-room__content
+        h1.search-room__title.title Номера, которые мы для вас подобрали
+        .search-room__results
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+          +room-card({
+            classes: 'room-card',
+            photoName: 'image1',
+            number: 888,
+            type: 'Люкс',
+            price: 9900,
+            photos: ['image1', 'image2'],
+            reviewsCount: '145',
+          })
+        .search-room__pagination
+          +pager('1 – 12 из 100+ вариантов аренды', '15')
+  +footer()
