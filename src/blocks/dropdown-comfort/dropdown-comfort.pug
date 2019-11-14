@@ -1,7 +1,8 @@
 include ../../blocks/dropdown/dropdown
 
-mixin dropdown-comfort()
+mixin dropdown-comfort(dropClasses)
     +dropdown({
+      dropClasses: dropClasses,
       label: 'Удобства номера',
       initialSelection: 'Сколько мебели?',
       controls: true,
