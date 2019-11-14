@@ -32,13 +32,13 @@
   margin-bottom: 20px;
 }
 
+.ui-kit__col {
+  padding-top: 140px;
+}
+
 .btn__title, .pagination__title, .text-field__title, .radio-buttons__title, 
 .toggle__title, .like-button__title, .rate-button__title {
   @include font-label;
-}
-
-.text-field__title {
-  padding: 140px 0 0 0;
 }
 
 .ui-kit__cards {
