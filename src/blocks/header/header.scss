@@ -1,5 +1,6 @@
 .header {
   background: #fff;
+  box-shadow: 0 10px 20px $dark-shade-5;
   &__logo {
     grid-area: logo;
     margin-right: auto;
