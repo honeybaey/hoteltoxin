@@ -36,6 +36,7 @@
 
     @media (max-width: $screen-xl) {
       justify-self: center;
+      padding-top: 5px;
     }
   }
   &__menu-list {
@@ -79,7 +80,7 @@
   &__user {
     display: grid;
     grid-area: user;
-    grid-gap: 10px;
+    grid-gap: 8px;
     justify-content: end;
     align-items: center;
     grid-auto-flow: column;
