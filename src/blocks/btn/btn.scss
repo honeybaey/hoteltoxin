@@ -13,6 +13,11 @@
   text-align: center;
   outline: none;
 
+  @media (max-width: 415px) {
+    width: 180px;
+    padding: 15px 1px;
+  }
+
   &:hover {
     opacity: 0.5;
   }
