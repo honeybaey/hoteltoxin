@@ -53,25 +53,3 @@
   font: $font-text;
   color: $dark-shade-50;
 }
-
-@media screen and (max-width: 576px) {
-  .pager {
-    &__item {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-      &.active, &:first-of-type, &:last-of-type, &:nth-of-type(2), &:nth-last-of-type(2) {
-        position: initial;
-        top: initial;
-        left: initial;
-      }
-    }
-    &__item.active {
-      & + li {
-        position: initial;
-        top: initial;
-        left: initial;
-      }
-    }
-  }
-}
