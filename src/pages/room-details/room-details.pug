@@ -22,24 +22,43 @@ block content
           {name: 'Соглашения', href: '#'}
       ],
     })
-  main
-    .room-details__image
+  main.room-details__content
+    .room-details__images
+      div
+        img(src="../../img/image1.png", alt="room_1")
+      div
+        div.room-details__small-pic
+          img(src="../../img/image13.png", alt="room_2")
+        div
+          img(src="../../img/image14.png", alt="room_3")
     .room-details__container.container
-      +room-info('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
-      +room-info('Удобство', 'Окно в каждой из спален', 'location_city')
-      +room-info('Уют', 'Номер оснащён камином', 'whatshot')
-      +feedback({
-          name: 'Мурад Сарафанов',
-          date: '2019-10-01',
-          text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-          image: 'user1',
-        })
-      +feedback({
-          name: 'Патрисия Стёклышкова',
-          date: '2019-10-01',
-          text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
-          image: 'user2',
-        })
-      +bullet-list('Правила')
-      +booking('booking card', '888', 'Люкс', '9990')
+      section
+        h2.subtitle Сведения о номере
+        +room-info('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
+        +room-info('Удобство', 'Окно в каждой из спален', 'location_city')
+        +room-info('Уют', 'Номер оснащён камином', 'whatshot')
+      section
+        h2.subtitle Впечатления от номера
+      section.room-details__booking
+        +booking('booking card', '888', 'Люкс', '9 990')
+      section.room-details__reviews
+        h2.subtitle Отзывы посетителей номера
+        +feedback({
+            name: 'Мурад Сарафанов',
+            date: '2019-10-01',
+            text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+            image: 'user1',
+          })
+        +feedback({
+            name: 'Патрисия Стёклышкова',
+            date: '2019-10-01',
+            text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+            image: 'user2',
+          })
+      section
+        h2.subtitle Правила
+        +bullet-list('')
+      section.room-details__cancel
+        h2.subtitle Отмена
+        p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
   +footer()
