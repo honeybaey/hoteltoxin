@@ -1,0 +1,49 @@
+.room-details {
+
+  &__images {
+    display: flex;
+  }
+
+  &__small-pic {
+    height: 243px;
+  }
+
+  &__container {
+    display: grid;
+    grid-gap: 30px 70px;
+    padding: 70px 0;
+
+    @media (min-width: $screen-lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__booking {
+
+    @media (min-width: $screen-lg) {
+      grid-column: auto;
+      grid-row: span 3;
+
+    }
+
+    @media (max-width: $screen-lg) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__reviews {
+    display: grid;
+    grid-gap: 20px;
+
+    @media (min-width: $screen-md) {
+      grid-column: span 2;
+    }
+  }
+
+  &__cancel p {
+    @include font-texts;
+    color: $dark-shade-75;
+    line-height: 1.5rem;
+  }
+}
