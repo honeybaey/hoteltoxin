@@ -1,6 +1,8 @@
-let slider = document.getElementById('rangeSlider');
+$(document).ready(function() {
+  let rangeSlider = document.getElementById('rangeSlider');
+  let nonLinearStepSliderValueElement = document.getElementById('rangeSliderValues');
 
-noUiSlider.create(slider, {
+  noUiSlider.create(rangeSlider, {
     start: [0, 15],
     connect: true,
     range: {
@@ -11,11 +13,10 @@ noUiSlider.create(slider, {
       decimals: 3,
       mark: ' ',
       suffix: '₽'
-  })
-});
+    })
+  });
 
-let nonLinearStepSliderValueElement = document.getElementById('rangeSliderValues');
-
-slider.noUiSlider.on('update', function (values) {
+  rangeSlider.noUiSlider.on('update', function (values) {
     nonLinearStepSliderValueElement.innerHTML = values.join(' - ');
-});
+  });
+})
