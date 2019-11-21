@@ -2,10 +2,23 @@
 
   &__images {
     display: flex;
+    justify-content: center;
+    max-height: 485px;
+    overflow: hidden;
   }
 
-  &__small-pic {
-    height: 243px;
+  &__small-img {
+    display: block;
+    margin-top: -1px;
+
+    @media (max-width: $screen-lg) {
+      display: none;
+    }
+
+    &_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__container {
