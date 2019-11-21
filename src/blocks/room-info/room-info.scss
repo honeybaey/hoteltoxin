@@ -1,12 +1,11 @@
 .room-info {
   max-width: 280px;
+  width: 100%;
+  font-family: 'Montserrat';
+  color: $dark-shade-75;
+  border-bottom: 1px solid $dark-shade-10;
+  margin-bottom: 20px;
 
-  &_wrapper {
-    font-family: 'Montserrat';
-    color: $dark-shade-75;
-    border-bottom: 1px solid $dark-shade-10;
-    margin-bottom: 20px;
-  }
 
   &__title {
     font-weight: bold;
@@ -17,7 +16,7 @@
     margin-top: 10px;
   }
 
-  &_icon {
+  &__icon {
     font-family: 'Material Icons';
     font-size: 48px;
     float: left;

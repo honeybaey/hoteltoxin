@@ -1,7 +1,6 @@
 mixin room-info(name, description, iconName)
 
   .room-info
-    .room-info_wrapper
-      .room-info_icon=iconName
-      span(class='room-info__title')=name
-      p(class='room-info__description')=description
+    .room-info__icon=iconName
+    span.room-info__title=name
+    p.room-info__description=description
