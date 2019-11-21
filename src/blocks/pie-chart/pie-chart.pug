@@ -1,0 +1,21 @@
+mixin pie-chart(params)
+    - const { greatVotes, goodVotes, okVotes, badVotes } = params;
+
+    .pie-chart(
+      data-great-votes=greatVotes
+      data-good-votes=goodVotes
+      data-ok-votes=okVotes
+      data-bad-votes=badVotes
+    )
+      .pie-chart__content
+        .pie-chart__votes
+          span.pie-chart__votes-count
+          br
+          span.pie-chart__votes-noun
+
+      .pie-chart-bullet.pie-chart_hoverable.pie-chart_vote-colored
+        ul.pie-chart__list
+          li.pie-chart__item Великолепно
+          li.pie-chart__item Хорошо
+          li.pie-chart__item Удовлетворительно
+          li.pie-chart__item Разочарован

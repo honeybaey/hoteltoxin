@@ -1,0 +1,128 @@
+@import "chartist/dist/scss/chartist.scss";
+
+$ct-series-colors: (
+  #FFBA9C,
+  #6FCF97,
+  #BC9CFF,
+  #919191,
+  #453d3f,
+  #59922b,
+  #0544d3,
+  #6b0392,
+  #f05b4f,
+  #dda458,
+  #eacf7d,
+  #86797d,
+  #b2c326,
+  #6188e2,
+  #a748ca
+) !default;
+
+.ct-series-a .ct-slice-donut {
+  stroke: #ffba9c;
+}
+
+.ct-series-b .ct-slice-donut {
+  stroke: #6fcf97;
+}
+
+.ct-series-c .ct-slice-donut {
+  stroke: #bc9cff;
+}
+
+.ct-series-d .ct-slice-donut {
+  stroke: #919191;
+}
+
+.ct-slice-donut {
+  cursor: pointer;
+  transition: all .3s;
+
+  &_hovered {
+    stroke-width: 8px !important;
+  }
+}
+
+.pie-chart {
+
+  @media (min-width: 360px) {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.pie-chart__content {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 10px;
+
+  @media (min-width: 360px) {
+    margin: 0 30px 0 0;
+  }
+}
+
+.pie-chart__votes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pie-chart__votes-count {
+  font-family: Quicksand, Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+}
+
+// pie-chart-bullet //
+.pie-chart__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pie-chart__item {
+  display: flex;
+  color: $dark-shade-75;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+
+  &::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin-top: 7px;
+    margin-right: 10px;
+    background: $dark-shade-25;
+    border-radius: 50%;
+  }
+}
+.pie-chart_vote-colored .pie-chart__item {
+
+  &:nth-child(1)::before {
+    background: linear-gradient(180deg, #ffe39c, #ffba9c);
+  }
+  &:nth-child(2)::before {
+    background: $gradient__secondary;
+  }
+  &:nth-child(3)::before {
+    background: $gradient__primary;
+  }
+  &:nth-child(4)::before {
+    background: linear-gradient(180deg, #919191, #3d4975);
+  }
+}
+.pie-chart_hoverable .pie-chart__item {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
