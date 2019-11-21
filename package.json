@@ -39,6 +39,7 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "autoprefixer": "^9.6.1",
+    "chartist": "^0.11.4",
     "item-quantity-dropdown": "^2.0.2",
     "jquery": "^3.4.1",
     "jquery-mask-plugin": "^1.14.15",
