@@ -24,10 +24,10 @@ block content
     })
   main.room-details__content
     section.room-details__images
-      img.room-details__large-img(src="../../img/image1.png", alt="room_1")
+      img.room-details__large-img(src=require('../../img/image1.png'), alt="room_1")
       .room-details__small-img_wrapper
-        img.room-details__small-img(src="../../img/image13.png", alt="room_2")
-        img.room-details__small-img(src="../../img/image14.png", alt="room_3")
+        img.room-details__small-img(src=require('./image13.png'), alt="room_2")
+        img.room-details__small-img(src=require('./image14.png'), alt="room_3")
     .room-details__container.container
       section
         h2.subtitle Сведения о номере
