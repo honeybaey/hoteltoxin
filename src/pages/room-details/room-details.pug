@@ -30,12 +30,12 @@ block content
         img.room-details__small-img(src=require('./image13.png'), alt="room_2")
         img.room-details__small-img(src=require('./image14.png'), alt="room_3")
     .room-details__container.container
-      section
+      section.room-details__info
         h2.subtitle Сведения о номере
         +room-info('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
         +room-info('Удобство', 'Окно в каждой из спален', 'location_city')
         +room-info('Уют', 'Номер оснащён камином', 'whatshot')
-      section
+      section.room-details__rating
         h2.subtitle Впечатления от номера
         +pie-chart({
           greatVotes: 421,
@@ -46,7 +46,7 @@ block content
       section.room-details__booking
         +booking('booking card', '888', 'Люкс', '9 990')
       section.room-details__reviews
-        h2.subtitle Отзывы посетителей номера
+        h2.room-details__reviews-subtitle.subtitle Отзывы посетителей номера
         +feedback({
             name: 'Мурад Сарафанов',
             date: '2019-10-01',
