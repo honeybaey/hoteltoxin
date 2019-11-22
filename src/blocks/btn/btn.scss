@@ -46,7 +46,8 @@
     }
   }
   &_big {
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
     vertical-align: middle;
     padding-top: 1px;
     &::after {
