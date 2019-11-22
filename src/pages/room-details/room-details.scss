@@ -9,15 +9,28 @@
 
   &__small-img {
     display: block;
-    margin-top: -1px;
+
+    &:nth-child(2) {
+      margin-top: -1px;
+    }
 
     @media (max-width: $screen-lg) {
       display: none;
     }
+  }
 
-    &_wrapper {
-      display: flex;
-      flex-wrap: wrap;
+  &__info {
+
+    @media (max-width: $screen-sm-max) {
+      justify-self: center;
+    }
+  }
+
+  &__rating {
+
+    @media (max-width: $screen-sm-max) {
+      justify-self: center;
+      margin-bottom: 30px;
     }
   }
 
@@ -26,12 +39,21 @@
     grid-gap: 30px 70px;
     padding: 70px 0;
 
+    @media (max-width: $screen-md) {
+      grid-column-gap: 30px;
+      padding-top: 40px;
+    }
+
     @media (min-width: $screen-lg) {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
   &__booking {
+
+    @media (min-width: $screen-sm-max) and (max-width: $screen-md-max) {
+      grid-column: span 2;
+    }
 
     @media (min-width: $screen-lg) {
       grid-column: auto;
@@ -48,6 +70,12 @@
   &__reviews {
     display: grid;
     grid-gap: 20px;
+
+    &-subtitle {
+      @media (max-width: $screen-md) {
+        margin: auto;
+      }
+    }
 
     @media (min-width: $screen-md) {
       grid-column: span 2;
