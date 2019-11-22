@@ -43,10 +43,10 @@
 }
 
 .dropdown {
-    // Important for overriding specificity of rules in item-quantity-dropdown
   .iqdropdown {
       height: 44px;
-      width: 320px;
+      max-width: 320px;
+      width: 100%;
       padding: 10px 15px;
       border: 1px solid $dark-shade-25;
       transition: border-color .2s;
@@ -57,6 +57,9 @@
       }
       &_booking {
         margin-bottom: 20px;
+      }
+      &_search-room {
+        width: 266px;
       }
 
       &.menu-open {
