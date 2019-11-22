@@ -6,6 +6,10 @@
   border-bottom: 1px solid $dark-shade-10;
   margin-bottom: 20px;
 
+  @media (max-width: $screen-md) {
+    width: 280px;
+  }
+
 
   &__title {
     font-weight: bold;
