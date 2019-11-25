@@ -1,5 +1,5 @@
 .masked-text-field {
-  width: 320px;
+  max-width: 320px;
   &__title {
     @include font-label;
   }
