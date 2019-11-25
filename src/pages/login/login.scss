@@ -1,0 +1,18 @@
+.login {
+
+  &__bg {
+    background-image: url('../pages/registration/reg-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__container {
+    padding: 125px 0 100px 0;
+  }
+
+  &-card {
+    display: flex;
+    justify-content: center;
+  }
+}
