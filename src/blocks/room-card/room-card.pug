@@ -6,23 +6,24 @@ mixin room-card(params)
   - const { getNoun } = require('../../utils');
 
   div(class=classes)
-    .room-card__carousel
-      for photoName in photos
-        .room-card__slide
-          img(
-              src=require(`../../img/${photoName}.png`)
-              alt=`Комната №${number}`
-            )
-    .room-card__info
-      .booking__wrapper_room-card
-        .booking__info.booking__info_room-card
-          h2(class='booking__number')=number
-          span.booking__type=type
-          span.booking__price
-            span.booking__price-value=price
-            | в сутки
-      .room-card__review
-        +rate-button('rate-button__wrapper_room-card')
-        p.room-card__review-count
-            span.room-card__review-count-value= reviewsCount + ' '
-            = getNoun(reviewsCount, 'Отзыв', 'Отзыва', 'Отзывов')
+    a.room-card__link(href='room-details.html')
+      .room-card__carousel
+        for photoName in photos
+          .room-card__slide
+            img(
+                src=require(`../../img/${photoName}.png`)
+                alt=`Комната №${number}`
+              )
+      .room-card__info
+        .booking__wrapper_room-card
+          .booking__info.booking__info_room-card
+            h2(class='booking__number')=number
+            span.booking__type=type
+            span.booking__price
+              span.booking__price-value=price
+              | в сутки
+        .room-card__review
+          +rate-button('rate-button__wrapper_room-card')
+          p.room-card__review-count
+              span.room-card__review-count-value= reviewsCount + ' '
+              = getNoun(reviewsCount, 'Отзыв', 'Отзыва', 'Отзывов')
