@@ -10,6 +10,19 @@
   &:hover {
     box-shadow: 0 0 25px $dark-shade-25;
   }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:focus,
+    &:active {
+      color: inherit;
+    }
+  }
   &__slide {
     overflow: hidden;
     width: 270px;
@@ -21,7 +34,7 @@
     }
   }
   &__info {
-    padding: 0 20px 20px 20px;
+    padding: 20px;
   }
   &__room-info {
     padding-bottom: 10px;
