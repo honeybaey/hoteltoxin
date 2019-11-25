@@ -1,7 +1,7 @@
 mixin btn(params)
 
-  - const { label, className} = params;
+  - const { label, className, href} = params;
 
   .btn__wrapper
-    button(class=className)
+    a(class=className href=href)
       span.btn__label=label
