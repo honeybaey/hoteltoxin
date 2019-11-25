@@ -1,0 +1,25 @@
+extends ../../pug/index
+
+include ../../blocks/header/header
+include ../../blocks/footer/footer
+include ../../blocks/registration-card/registration-card
+
+block variables
+  - const title = 'Registration';
+
+block content
+  +header({
+      isLoggedIn: false,
+      menuItems: [
+          {name: 'О нас', href: '#'},
+          {name: 'Услуги', href: '#'},
+          {name: 'Вакансии', href: '#'},
+          {name: 'Новости', href: '#'},
+          {name: 'Соглашения', href: '#'}
+      ],
+    })
+  main.registration__bg
+    .registration__container.container
+      section.registration-card
+        +registration('Регистрация аккаунта', 'registration card')
+  +footer()
