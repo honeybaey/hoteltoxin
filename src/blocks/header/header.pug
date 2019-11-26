@@ -8,7 +8,7 @@ mixin header(params)
     .header__nav.container
       .header__logo
         +logo
-      .header__menu
+      nav.header__menu
         ul.header__menu-list
           each menuItem in menuItems
             - const { name, href, submenu } = menuItem;
