@@ -2,7 +2,7 @@ include ../rate-button/rate-button
 
 mixin room-card(params)
 
-  - const { classes, photoName, number, type, price, photos, reviewsCount } = params;
+  - const { classes, photoName, number, type, price, photos, reviewsCount, rating} = params;
   - const { getNoun } = require('../../utils');
 
   div(class=classes)
@@ -23,7 +23,7 @@ mixin room-card(params)
               span.booking__price-value=price
               | в сутки
         .room-card__review
-          +rate-button('rate-button__wrapper_room-card')
+          +rate-button(rating, true)
           p.room-card__review-count
               span.room-card__review-count-value= reviewsCount + ' '
               = getNoun(reviewsCount, 'Отзыв', 'Отзыва', 'Отзывов')
