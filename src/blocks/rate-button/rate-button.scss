@@ -1,57 +1,35 @@
-.rate-button {
-  font-size: 0;
-  &__wrapper {
-    &_room-card {
-      margin-top: 5px;
-    }
-  }
-  * {
-    font-size: 1.5rem;
-  }
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  & > input {
-    display: none;
-    & + label {
-      display: inline-block;
-      overflow: hidden;
-      text-indent: 9999px;
-      width: 1em;
-      white-space: nowrap;
-      cursor: pointer;
-      &:before {
-        display: inline-block;
-        text-indent: -9999px;
-        font-family: 'Material Icons';
-        content: '\e83a';
-        color: #BC9CFF;
-      }
-    }
-    &:checked ~ label:before,
-      & + label:hover ~ label:before,
-      & + label:hover:before {
-      font-family: 'Material Icons';
-      content: '\e838';
-      color: #BC9CFF;
-    }
-  }
-  
-  & > .rate-button + label {
-    text-indent: -9999px;
-    width: .5em;
-    margin-left: -.5em;
-  }
-  & > .rate-button + label:before {
-    width: .5em;
+.rate-btn {
+  display: inline-block;
+  letter-spacing: -10px;
+
+  &__star {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    text-align: center;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 
-  &:hover > input + label:before {
-    content: '\e83a';
-    color: #BC9CFF;
+  &__icon {
+    @include gradient-color($gradient__primary);
+    position: relative; 
+    font-size: 1.5rem;
+    line-height: 1;
   }
-  &:hover > input + label:hover ~ label:before,
-  &:hover > input + label:hover:before {
-    content: '\e838';
-    color: #BC9CFF;
+
+  &__inner-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-size: 0.875rem;
+    color: white;
   }
+}
+
+.rate-btn__star_empty .rate-btn__inner-icon {
+  display: block;
 }
