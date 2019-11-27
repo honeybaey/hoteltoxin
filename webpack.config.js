@@ -7,13 +7,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
 module.exports = {  
-	entry: [ 
-		'./src/index.js',
-	],  
-	output: {    
-		path: path.resolve(__dirname, './dist'),
-		filename: './js/main.js', 
-		// publicPath: '/dist',
+  entry: [ 
+    './src/index.js',
+  ],  
+  output: {    
+    path: path.resolve(__dirname, './dist'),
+    filename: './js/main.js', 
+    // publicPath: '/dist',
   },
   /* resolve: {
     alias: {
@@ -21,23 +21,23 @@ module.exports = {
     }
   }, */
   devServer: {
-    openPage: ['ui-kit.html', 'landing-page.html']
+    openPage: ['landing-page.html']
   },
-	module: {  
-		rules: [   
-			{
-				test: /\.scss$/,
-				// use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-				use: [{
-					loader: 'style-loader',
-			},	{
-					loader: MiniCssExtractPlugin.loader,
-			},
-			 {
-					loader: 'css-loader',
-					options: {
-						url: true,
-					},
+  module: {  
+    rules: [   
+      {
+        test: /\.scss$/,
+        // use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: [{
+          loader: 'style-loader',
+      },	{
+          loader: MiniCssExtractPlugin.loader,
+      },
+       {
+          loader: 'css-loader',
+          options: {
+            url: true,
+          },
       },
       {
         loader: 'postcss-loader',
@@ -49,83 +49,108 @@ module.exports = {
           }
         }
       },
-			 {
-					loader: 'sass-loader',
-			}]
-			},
-			{
-				test: /\.pug$/,
-				loader: 'pug-loader',
-				options: {
-					pretty: true,
-				},
-			},
-			{
+       {
+          loader: 'sass-loader',
+      }]
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: true,
+        },
+      },
+      {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-							publicPath: '../img/',
-							name: '[name].[ext]',
-							outputPath: './img',
+              publicPath: '../img/',
+              name: '[name].[ext]',
+              outputPath: './img',
             },
           },
-				],
-				exclude: [/fonts/],
-			},
-			{
+        ],
+        exclude: [/fonts/],
+      },
+      {
         test: /\.(eot|svg|ttf|woff)$/,
         use: [
           {
-						loader: 'file-loader',
+            loader: 'file-loader',
             options: {
-							publicPath: '../fonts/',
-							name: '[name].[ext]',
-							outputPath: './fonts',
-						},
+              publicPath: '../fonts/',
+              name: '[name].[ext]',
+              outputPath: './fonts',
+            },
           },
         ],
       },    
-		]
-	},
-	plugins: [
-		new CleanWebpackPlugin(),
-		new MiniCssExtractPlugin(
-			{
-			filename: 'css/style.css',
-		}
-		),
-		new HtmlWebpackPlugin(
-			{
+    ]
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin(
+      {
+      filename: 'css/style.css',
+    }
+    ),
+    new HtmlWebpackPlugin(
+      {
       filename: 'index.html',
-			template: './src/pug/index.pug',
-		}
+      template: './src/pug/index.pug',
+    }
     ),
     new HtmlWebpackPlugin(
-			{
+      {
       filename: 'ui-kit.html',
-			template: './src/pages/ui-kit/ui-kit.pug',
-		}
-		),
-    new HtmlWebpackPlugin(
-			{
-      filename: 'landing-page.html',
-			template: './src/pages/landing-page/landing-page.pug',
-		}
+      template: './src/pages/ui-kit/ui-kit.pug',
+    }
     ),
-		new CopyWebpackPlugin([
-			{ from: './src/img', to: './img' },
-			{ from: './src/static', to: './img' },
+    new HtmlWebpackPlugin(
+      {
+      filename: 'landing-page.html',
+      template: './src/pages/landing-page/landing-page.pug',
+    }
+    ),
+    new HtmlWebpackPlugin(
+      {
+      filename: 'search-room.html',
+      template: './src/pages/search-room/search-room.pug',
+    }
+    ),
+    new HtmlWebpackPlugin(
+      {
+      filename: 'room-details.html',
+      template: './src/pages/room-details/room-details.pug',
+    }
+    ),
+    new HtmlWebpackPlugin(
+      {
+      filename: 'registration.html',
+      template: './src/pages/registration/registration.pug',
+    }
+    ),
+    new HtmlWebpackPlugin(
+      {
+      filename: 'login.html',
+      template: './src/pages/login/login.pug',
+    }
+    ),
+    new CopyWebpackPlugin([
+      { from: './src/img', to: './img' },
+      { from: './src/static', to: './img' },
     ]),
-		new webpack.ProvidePlugin(
-			{
-			$: 'jquery',
-			jQuery: 'jquery',
+    new webpack.ProvidePlugin(
+      {
+      $: 'jquery',
+      jQuery: 'jquery',
       'window.jQuery': 'jquery',
       noUiSlider: 'nouislider',
-      'wNumb': 'wnumb'
-		}
+      'wNumb': 'wnumb',
+      Chartist: 'chartist'
+    }
     ),
-	]
+  ]
 };
