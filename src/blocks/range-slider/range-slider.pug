@@ -1,6 +1,6 @@
-mixin range-slider(name, description, rangeClasses)
+mixin range-slider(name, description)
 
-  div(class=`range-slider ${rangeClasses}`)
+  .range-slider
     p.range-slider__title=name
     span(class='range-slider__value' id='rangeSliderValues')
     div(class='range-slider__field' id='rangeSlider')
