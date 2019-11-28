@@ -2,17 +2,17 @@ include ../like-button/like-button
 
 mixin feedback(params)
   -
-      const { image, name, text } = params;
+      const { image, name, text, likes, isLiked } = params;
       const moment = require('moment');
       moment.locale('ru');
       const date = moment().to(params.date);
 
-  .feedback_wrapper
+  .feedback
     .feedback__media
       .feedback__avatar
         img(src=require(`../../img/${image}.png`), alt=name)
       .feedback__likes
-        +like-button('12')
+        +like-button(likes, isLiked)
     .feedback__info
       p(class='feedback__name')=name
       p(class='feedback__date')=date
