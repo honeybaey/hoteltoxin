@@ -2,4 +2,8 @@
   @media (max-width: 375px) {
     width: 90px;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
