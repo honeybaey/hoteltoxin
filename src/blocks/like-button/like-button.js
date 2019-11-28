@@ -1,23 +1,18 @@
-let elem = document.querySelector('.like-button__item');
+const $likeButtons = $(".like-btn");
 
-elem.onclick = likeCounter;
+const handleClick = function({ currentTarget }) {
+  const $clickedBtn = $(currentTarget);
+  const $likesCounter = $(".like-btn__count", currentTarget);
+  const likesCount = $likesCounter.text();
 
-function likeCounter() {
-  document.querySelector('.like-button__count').classList.toggle('like-button__count_liked');
-  this.classList.toggle('like-button__item_liked');
-}
+  $(currentTarget).toggleClass("like-btn_clicked");
 
-$(document).ready(function() {
-  $('.like-button__item').on('click', function() {
-      $('.like-button__count').html(function() {
-        if (this.clicked == 'true') {
-          this.clicked = 'false';
-          this.innerHTML = parseInt(this.innerHTML) - 1;
-        }
-        else {
-          this.clicked = 'true'
-          this.innerHTML = parseInt(this.innerHTML) + 1;
-        }
-      });
-  });
-});
+  const isClicked = $clickedBtn.hasClass("like-btn_clicked");
+  $likesCounter.text(isClicked ? +likesCount + 1 : +likesCount - 1);
+
+  $(".like-btn__icon", currentTarget).text(
+    isClicked ? "favorite" : "favorite_border"
+  );
+};
+
+$likeButtons.click(handleClick);
