@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
+const { baseUrl } = require("./config");
+
 module.exports = {
   entry: ["./src/index.js"],
   output: {
@@ -64,7 +66,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              publicPath: "../img/",
+              publicPath: `${baseUrl}img/`,
               name: "[name].[ext]",
               outputPath: "./img"
             }
