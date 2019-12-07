@@ -2,7 +2,7 @@
   display: inline-block;
   cursor: pointer;
   @include font-label;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 15px 18px;
   border-radius: 22px;
   border: none;
@@ -20,7 +20,7 @@
   }
 
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
   &:active {
     position: relative;
@@ -41,11 +41,6 @@
     width: 99px;
     height: 32px;
     padding-top: 9px;
-
-    @media (max-width: $screen-sm-max) {
-      width: 85px;
-      margin-left: 15px;
-    }
   }
   &_border-header {
     background: none;
@@ -64,8 +59,8 @@
     vertical-align: middle;
     position: relative;
     &::after {
-      font-family: 'Material Icons';
-      content: '\e5c8';
+      font-family: "Material Icons";
+      content: "\e5c8";
       font-size: 1.5rem;
       position: absolute;
       right: 20px;
