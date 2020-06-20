@@ -1,8 +1,7 @@
-
 # Toxin Hotel
-Отзывчивая, семантическая, кроссбраузерная верстка сайта по поиску и бронированию номеров отеля. 
+![toxin-hotel](https://i.ibb.co/ZXYrDzJ/Gifius-ru.gif)
 
-> Ссылка на макет: https://clck.ru/KLvuo
+Отзывчивая, семантическая, кроссбраузерная верстка сайта по поиску и бронированию номеров отеля. 
 
 -   [Главная страница](https://honeybaey.github.io/toxin/landing-page.html)
 -   [Поиск номера](https://honeybaey.github.io/toxin/search-room.html)
