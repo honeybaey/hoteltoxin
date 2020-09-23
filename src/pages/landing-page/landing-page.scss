@@ -1,10 +1,9 @@
-.landing-page {
-  &__bg {
-    background-image: url('../pages/landing-page/background-img.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+.main-content {
+  background-image: url("../pages/landing-page/background-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   &__container {
     position: relative; // for position title
     padding: 70px 0 386px 0;

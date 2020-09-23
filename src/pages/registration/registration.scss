@@ -1,14 +1,12 @@
 .registration {
-
-  &__bg {
-    background-image: url('../pages/registration/reg-bg.jpg');
+  &-main {
+    background-image: url("../pages/registration/reg-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  &__container {
-    padding: 50px 0 25px 0;
+    &__container {
+      padding: 50px 0 25px 0;
+    }
   }
 
   &-card {
