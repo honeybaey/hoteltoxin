@@ -2,15 +2,15 @@ include ../like-button/like-button
 
 mixin feedback(params)
   -
-      const { image, name, text, likes, isLiked } = params;
-      const moment = require('moment');
-      moment.locale('ru');
-      const date = moment().to(params.date);
+    const { image, name, text, likes, isLiked } = params;
+    const moment = require('moment');
+    moment.locale('ru');
+    const date = moment().to(params.date);
 
   .feedback
     .feedback__media
       .feedback__avatar
-        img(src=require(`../../img/${image}.png`), alt=name)
+        img(src=(`img/${image}.png`), alt=name)
       .feedback__likes
         +like-button(likes, isLiked)
     .feedback__info

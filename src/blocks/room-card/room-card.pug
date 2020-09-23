@@ -11,7 +11,7 @@ mixin room-card(params)
         for photoName in photos
           .room-card__slide
             img(
-                src=require(`../../img/${photoName}.png`)
+                src=(`img/${photoName}.png`)
                 alt=`Комната №${number}`
               )
       .room-card__info
